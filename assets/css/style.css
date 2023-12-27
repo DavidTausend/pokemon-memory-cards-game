@@ -12,26 +12,32 @@ body {
     color: white;
 }
 
-h2 {
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
+}
+
+h2 {
     font-weight: 700;
     font-size: xx-large;
 }
 
 p {
-    text-align: center;
     font-size: x-large;
     font-weight: bold;
 }
 
 .actions {
     display: flex;
-    justify-content: center;
 }
 
 /* Buttons class */
 .actions button {
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.2rem;
     font-size: large;
     border-radius: 0.8rem;
     background-color: red;
@@ -89,18 +95,52 @@ p {
 
 /* Shake animation */
 @keyframes shake {
-    0% { transform: translateX(0px); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0px); }
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 /* Media query: small screens cellphones (480px and up) */
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+
+    h2,
+    p {
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+}
 
 /* Media query: medium screens tables */
-@media only screen and (min-width: 481px) and (max-width: 768px) {}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    h2,
+    p {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+}
 
 /* Media query: larger screens laptops and tables (769px and up) */
 @media screen and (min-width: 769px) {}

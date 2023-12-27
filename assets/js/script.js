@@ -1,3 +1,4 @@
+//Cards
 let counter = 0;
 let firstCard = "";
 let secondCard = "";
@@ -41,3 +42,5 @@ cards.forEach((card) => {
         }
     });
 });
+
+//Score
