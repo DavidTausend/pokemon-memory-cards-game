@@ -1,10 +1,9 @@
-
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
+}
 
 body {
     min-height: 100vh;
@@ -24,7 +23,6 @@ p {
     font-size: x-large;
     font-weight: bold;
 }
-
 
 .actions {
     display: flex;
@@ -72,38 +70,43 @@ p {
 
 /* Pokemon card image */
 .card img {
-    width: 80%;
-    max-height: 90px;
+    height: 110px;
+    width: 90px;
+    border-radius: 10px;
     opacity: 0;
     transition: 0.3s all ease;
 }
 
-/* Click card effect */
-.card.clicked {
+/* Show card */
+.card.clicked img,
+.card.checked img {
+    opacity: 1;
+}
 
+.card.shake {
+    animation: shake 0.5s;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0px); }
 }
 
 /* Media query: small screens cellphones (480px and up) */
-@media screen and (max-width: 480px) { 
-
-}
+@media screen and (max-width: 480px) {}
 
 /* Media query: medium screens tables */
-@media only screen and (min-width: 481px) and (max-width: 768px) { 
-
-}
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
 
 /* Media query: larger screens laptops and tables (769px and up) */
-@media screen and (min-width: 769px) { 
-
-}
+@media screen and (min-width: 769px) {}
 
 /* Media query: larger devices (992px and up) */
-@media screen and (min-width: 992px) {
-
-}
+@media screen and (min-width: 992px) {}
 
 /* Media query: larger screen devices (1200px and up) */
-@media screen and (min-width: 1200px) {
-
-}
+@media screen and (min-width: 1200px) {}
