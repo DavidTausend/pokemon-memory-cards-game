@@ -1,4 +1,8 @@
-//Cards
+// Play music game
+var audio = new Audio("../audio/pokemom-instrumental.mp3");
+audio.play();
+
+// Cards code
 let counter = 0;
 let firstCard = "";
 let secondCard = "";
@@ -19,17 +23,20 @@ cards.forEach((card) => {
             secondCard = card.getAttribute("pokemon");
 
             if (firstCard === secondCard && firstCardElement !== card) {
-                // Macth
+                // Macth Cards
                 card.classList.add("checked");
                 firstCardElement.classList.add("checked");
+                // If the cards macht increments the score
+                incrementScore();
                 console.log(firstCardElement);
             } else {
-                // No match, shake and hide
+                // No match, shake and hide card
                 setTimeout(() => {
                     card.classList.remove("clicked");
                     firstCardElement.classList.remove("clicked");
                     card.classList.add("shake");
                     firstCardElement.classList.add("shake");
+                    descreaseScore();
                     // Remove shake class after animation
                     setTimeout(() => {
                         card.classList.remove("shake");
@@ -43,4 +50,31 @@ cards.forEach((card) => {
     });
 });
 
-//Score
+//Scores code (Love math)
+//Increments score by 100
+function incrementScore() {
+
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = oldScore + 100;
+
+}
+
+//Decrease score by 100
+function descreaseScore() {
+
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    // Score will decrease but doesn't go minus
+    let newScore = oldScore - 100 < 0 ? 0 : oldScore - 100;
+    document.getElementById("score").innerText = newScore;
+
+}
+
+function Restart() {
+    // Reset score
+    document.getElementById("score").innerText = 0;
+    // Reset score
+    cards.forEach(card => {
+        card.classList.remove("checked", "clicked", "shake");
+    });
+    // Rest game
+}

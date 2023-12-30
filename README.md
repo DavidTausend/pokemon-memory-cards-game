@@ -38,6 +38,11 @@
 
 ## Features
 
+### Score
+
+Reminder:
+Doesn't got minus.
+
 ### Future Implementations
 
 ## Technologies
