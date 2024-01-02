@@ -2,6 +2,26 @@
 var audio = new Audio("../audio/pokemom-instrumental.mp3");
 audio.play();
 
+// shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Shuffle cards
+function shuffleCards() {
+    const cardContainer = document.querySelector('.cards');
+    let cards = Array.from(cardContainer.children);
+    cards = shuffleArray(cards);
+    cards.forEach(card => cardContainer.appendChild(card));
+}
+
+// Calls shuffleCards function when the page loads
+window.onload = shuffleCards;
+
 // Cards code
 let counter = 0;
 let firstCard = "";
