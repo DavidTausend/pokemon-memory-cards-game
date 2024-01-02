@@ -69,12 +69,12 @@ function descreaseScore() {
 
 }
 
+// Reset game
 function Restart() {
     // Reset score
     document.getElementById("score").innerText = 0;
-    // Reset score
+    // Reset cards
     cards.forEach(card => {
         card.classList.remove("checked", "clicked", "shake");
     });
-    // Rest game
 }
