@@ -1,5 +1,5 @@
 // Play music game
-var audio = new Audio("../audio/pokemom-instrumental.mp3");
+let audio = new Audio("../audio/pokemom-instrumental.mp3");
 audio.play();
 
 // End of music
@@ -16,7 +16,7 @@ function shuffleArray(array) {
 // Cards generator: https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1
 // Shuffle cards
 function shuffleCards() {
-    const cardContainer = document.querySelector('.cards');
+    const cardContainer = document.getElementsByClassName('.cards');
     let cards = Array.from(cardContainer.children);
     cards = shuffleArray(cards);
     cards.forEach(card => cardContainer.appendChild(card));
@@ -31,14 +31,14 @@ window.onload = shuffleCards;
 //Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
 
 // Timer variables
-var timer = {
+let timer = {
     minutes: 0,
     seconds: 0,
     interval: null
 };
 
 // Tracks the first card clicked
-var firstClick = true; 
+let firstClick = true; 
 
 // Start timer function
 function startTimer() {
@@ -80,6 +80,7 @@ let firstCard = "";
 let secondCard = "";
 let firstCardElement = null;
 
+// 
 const cards = document.querySelectorAll(".cards .card");
 
 // Card is clicked
