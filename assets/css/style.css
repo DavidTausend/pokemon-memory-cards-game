@@ -53,16 +53,16 @@ p {
 .cards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px /2 * 3));
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(2, calc(90px /2 * 3));
 }
 
 /* https://www.w3schools.com/cssref/pr_background-image.php */
 .card {
     display: grid;
     justify-content: center;
-    height: 110px;
-    width: 90px;
+    height: 130px;
+    width: 95px;
     background-image: url(../images/cards/card.jpg);
     background-size: cover;
     border-radius: 10px;
@@ -76,8 +76,8 @@ p {
 
 /* Pokemon card image */
 .card img {
-    height: 110px;
-    width: 90px;
+    height: 130px;
+    width: 95px;
     border-radius: 10px;
     opacity: 0;
     transition: 0.3s all ease;

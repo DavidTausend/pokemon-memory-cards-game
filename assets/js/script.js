@@ -2,6 +2,8 @@
 var audio = new Audio("../audio/pokemom-instrumental.mp3");
 audio.play();
 
+// End of music
+
 // shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -11,6 +13,7 @@ function shuffleArray(array) {
     return array;
 }
 
+// Cards generator: https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1
 // Shuffle cards
 function shuffleCards() {
     const cardContainer = document.querySelector('.cards');
@@ -22,6 +25,55 @@ function shuffleCards() {
 // Calls shuffleCards function when the page loads
 window.onload = shuffleCards;
 
+// End of cards shuffle
+
+
+//Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
+
+// Timer variables
+var timer = {
+    minutes: 0,
+    seconds: 0,
+    interval: null
+};
+
+// Tracks the first card clicked
+var firstClick = true; 
+
+// Start timer function
+function startTimer() {
+    // Just one time interval
+    if (timer.interval) return; 
+
+    timer.interval = setInterval(function() {
+        timer.seconds++;
+        if (timer.seconds === 60) {
+            timer.minutes++;
+            timer.seconds = 0;
+        }
+        updateTimerDisplay();
+    }, 1000);
+}
+
+// Update timer display function
+function updateTimerDisplay() {
+    var timerElement = document.querySelector(".timer");
+    var formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;
+    var formattedSeconds = timer.seconds < 10 ? "0" + timer.seconds : timer.seconds;
+    timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
+}
+
+// Reset timer function
+function resetTimer() {
+    clearInterval(timer.interval);
+    timer.interval = null;
+    timer.minutes = 0;
+    timer.seconds = 0;
+    updateTimerDisplay();
+}
+
+// End of timer game
+
 // Cards code
 let counter = 0;
 let firstCard = "";
@@ -29,9 +81,16 @@ let secondCard = "";
 let firstCardElement = null;
 
 const cards = document.querySelectorAll(".cards .card");
+
+// Card is clicked
 cards.forEach((card) => {
     card.addEventListener("click", () => {
+        if (firstClick) {
+            startTimer();
+            firstClick = false; // Set firstClick to false so the timer won't start again
+        }
         card.classList.add("clicked");
+        
         //Test
         console.log(true);
 
@@ -62,7 +121,7 @@ cards.forEach((card) => {
                         card.classList.remove("shake");
                         firstCardElement.classList.remove("shake");
                     }, 1000);
-                }, 1000); 
+                }, 1000);
             }
 
             counter = 0;
@@ -89,6 +148,8 @@ function descreaseScore() {
 
 }
 
+// End of scores
+
 // Reset game
 function Restart() {
     // Reset score
@@ -97,4 +158,10 @@ function Restart() {
     cards.forEach(card => {
         card.classList.remove("checked", "clicked", "shake");
     });
+    // Reset timer
+    resetTimer();
+    // Reset firstClick to true for the next game
+    firstClick = true; 
 }
+
+// End of reset game

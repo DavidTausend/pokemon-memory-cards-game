@@ -99,6 +99,10 @@ Doesn't got minus.
 
 ### Reset Game
 
+### Timer
+
+### Schuffle cards
+
 ### Future Implementations
 
 ## Technologies
