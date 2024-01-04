@@ -1,9 +1,11 @@
 /* JS Code quality tool: https://jshint.com/ */
 /* https://www.w3schools.com/w3css/w3css_modal.asp */
-function showInstructions() {
-    let instructionsWindow = document.getElementById("instructions");
-    let span = document.getElementsByClassName("close-window")[0];
 
+let instructionsWindow = document.getElementById("instructions");
+let span = document.getElementsByClassName("close-window")[0];
+
+function showInstructions() {
+    
     // Open the instructions window (model)
     instructionsWindow.style.display = "block";
 
@@ -20,9 +22,9 @@ function showInstructions() {
     }
 }
 
+let musicSettingsWindow = document.getElementById("music");
+
 function musicSettings() {
-    let musicSettingsWindow = document.getElementById("music");
-    let span = document.getElementsByClassName("close-window")[0];
 
     musicSettingsWindow.style.display = "block";
 
