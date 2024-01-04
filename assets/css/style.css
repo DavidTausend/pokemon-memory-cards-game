@@ -89,28 +89,22 @@ p {
     cursor: pointer;
 }
 
-.game-grid-contanier {
-    display: grid;
-    justify-content: center;
-    min-height: 10vh;
-}
-
 .cards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(2, calc(90px /2 * 3));
+    grid-template-columns: repeat(6, 110px);
+    grid-template-rows: repeat(2, calc(105px /2 * 3));
 }
 
 /* https://www.w3schools.com/cssref/pr_background-image.php */
 .card {
     display: grid;
     justify-content: center;
-    height: 130px;
-    width: 95px;
+    height: 165px;
+    width: 120px;
     background-image: url(../images/cards/card.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.3s all ease;
 }
@@ -121,8 +115,8 @@ p {
 
 /* Pokemon card image */
 .card img {
-    height: 130px;
-    width: 95px;
+    height: 165px;
+    width: 120px;
     border-radius: 10px;
     opacity: 0;
     transition: 0.3s all ease;

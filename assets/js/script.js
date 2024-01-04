@@ -70,7 +70,7 @@ function shuffleArray(array) {
 // Cards generator: https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1
 // Shuffle cards
 function shuffleCards() {
-    const cardContainer = document.getElementsByClassName('cards')[0];
+    const cardContainer = document.getElementsByClassName("cards")[0];
     let cards = Array.from(cardContainer.children);
     cards = shuffleArray(cards);
     cards.forEach(card => cardContainer.appendChild(card));
@@ -111,7 +111,7 @@ function startTimer() {
 
 // Update timer display function
 function updateTimerDisplay() {
-    let timerElement = document.querySelector(".timer");
+    let timerElement = document.getElementsByClassName("timer") [0];
     let formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;
     let formattedSeconds = timer.seconds < 10 ? "0" + timer.seconds : timer.seconds;
     timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
@@ -134,15 +134,17 @@ let firstCard = "";
 let secondCard = "";
 let firstCardElement = null;
 
-// 
-const cards = document.querySelectorAll(".cards .card");
+const cards = document.getElementsByClassName("card");
+let cardsArray = Array.from(cards);
 
 // Card is clicked
-cards.forEach((card) => {
+// Convernt to an array
+cardsArray.forEach((card) => {
     card.addEventListener("click", () => {
         if (firstClick) {
             startTimer();
-            firstClick = false; // Set firstClick to false so the timer won't start again
+            // Set firstClick to false so the timer won't start again
+            firstClick = false; 
         }
         card.classList.add("clicked");
         
@@ -210,7 +212,7 @@ function Restart() {
     // Reset score
     document.getElementById("score").innerText = 0;
     // Reset cards
-    cards.forEach(card => {
+    cardsArray.forEach((card) => {
         card.classList.remove("checked", "clicked", "shake");
     });
     // Reset timer
