@@ -1,38 +1,38 @@
 /* JS Code quality tool: https://jshint.com/ */
 /* https://www.w3schools.com/w3css/w3css_modal.asp */
 function showInstructions() {
-    let window = document.getElementById("instructions");
+    let instructionsWindow = document.getElementById("instructions");
     let span = document.getElementsByClassName("close-window")[0];
 
-    // Open the window (model)
-    window.style.display = "block";
+    // Open the instructions window (model)
+    instructionsWindow.style.display = "block";
 
-    // Close window (model) when the user clicks on (x)
+    // Close instructions window (model) when the user clicks on (x)
     span.onclick = function () {
-        window.style.display = "none";
+        instructionsWindow.style.display = "none";
     }
 
-    // Close the window (model) when the user clicks anywhere outside of the window
-    window.onclick = function (event) {
-        if (event.target == window) {
-            window.style.display = "none";
+    // Close the instructions window (model) when the user clicks anywhere outside of the window
+    instructionsWindow.onclick = function (event) {
+        if (event.target == instructionsWindow) {
+            instructionsWindow.style.display = "none";
         }
     }
 }
 
 function musicSettings() {
-    let window = document.getElementById("music");
+    let musicSettingsWindow = document.getElementById("music");
     let span = document.getElementsByClassName("close-window")[0];
 
-    window.style.display = "block";
+    musicSettingsWindow.style.display = "block";
 
     span.onclick = function () {
-        window.style.display = "none";
+        musicSettingsWindow.style.display = "none";
     };
 
-    window.onclick = function (event) {
-        if (event.target == window) {
-            window.style.display = "none";
+    musicSettingsWindow.onclick = function (event) {
+        if (event.target == musicSettingsWindow) {
+            musicSettingsWindow.style.display = "none";
         }
     };
 }
@@ -62,6 +62,21 @@ function sliderChange(value) {
 function selectAndDisplayCards() {
     // Pokemon List
     const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "jiglypuff", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu", "squirtle"];
+
+    // Select randomly 8 pokemons
+    let selectedPokemon = [];
+    while (selectedPokemon.length < 8) {
+        const randomIndex = Math.floor(Math.random() * allPokemon.length);
+        const pokemon = allPokemon[randomIndex];
+        if (!selectedPokemon.includes(pokemon)) {
+            selectedPokemon.push(pokemon);
+        }
+    }
+    // Duplicate each Pokemon to make 16 cards
+    selectedPokemon = selectedPokemon.concat(selectedPokemon);
+
+    // Shuffle the cards
+    shuffleArray(selectedPokemon);
 }
 
 // shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
