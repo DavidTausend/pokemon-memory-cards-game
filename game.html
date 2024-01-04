@@ -18,8 +18,9 @@
         <div class="content-container">
             <h2>Gotta catch 'em all!</h2>
             <br>
-            <div>
+            <div class="time-score-container">
                 <p class="timer">0:00</p>
+                <p class="scores">Score: <span id="score">0</span></p>
             </div>
             <div class="cards">
                 <div class="card" data-pokemon="blastoise">
@@ -70,15 +71,13 @@
                 <div class="card" data-pokemon="squirtle">
                     <img src="assets/images/cards/squirtle.png" alt="squirtle pokemon">
                 </div>
-
             </div>
-            <br>
+            <div id="button-container">
+                <button onclick="Restart()">Restart</button>
+                <button onclick="location.href='index.html'">Quit Game</button>
+            </div>
         </div>
-        <p class="scores">Score: <span id="score">0</span></p>
-        <br>
-        <div class="actions">
-            <button onclick="Restart()">restart</button>
-        </div>
+        
     </header>
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>

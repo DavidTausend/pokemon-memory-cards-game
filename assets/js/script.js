@@ -8,29 +8,29 @@ function showInstructions() {
     window.style.display = "block";
 
     // Close window (model) when the user clicks on (x)
-    span.onclick = function() {
+    span.onclick = function () {
         window.style.display = "none";
     }
 
     // Close the window (model) when the user clicks anywhere outside of the window
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == window) {
             window.style.display = "none";
         }
     }
 }
 
- function musicSettings() {
+function musicSettings() {
     let window = document.getElementById("music");
     let span = document.getElementsByClassName("close-window")[0];
 
     window.style.display = "block";
 
-    span.onclick = function() {
+    span.onclick = function () {
         window.style.display = "none";
     };
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == window) {
             window.style.display = "none";
         }
@@ -49,7 +49,7 @@ let audio = new Audio("assets/audio/music.mp3");
 audio.volume = 0.5;
 
 function sliderChange(value) {
-    let volume = value / 100; 
+    let volume = value / 100;
     // Set the volume to the audio
     audio.volume = volume; // Set the volume of the audio
     // Update the display value
@@ -57,6 +57,12 @@ function sliderChange(value) {
 }
 
 // End of Music Settings
+
+// Ask mentor
+function selectAndDisplayCards() {
+    // Pokemon List
+    const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "jiglypuff", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu", "squirtle"];
+}
 
 // shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
@@ -92,14 +98,14 @@ let timer = {
 };
 
 // Tracks the first card clicked
-let firstClick = true; 
+let firstClick = true;
 
 // Start timer function
 function startTimer() {
     // Just one time interval
-    if (timer.interval) return; 
+    if (timer.interval) return;
 
-    timer.interval = setInterval(function() {
+    timer.interval = setInterval(function () {
         timer.seconds++;
         if (timer.seconds === 60) {
             timer.minutes++;
@@ -111,7 +117,7 @@ function startTimer() {
 
 // Update timer display function
 function updateTimerDisplay() {
-    let timerElement = document.getElementsByClassName("timer") [0];
+    let timerElement = document.getElementsByClassName("timer")[0];
     let formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;
     let formattedSeconds = timer.seconds < 10 ? "0" + timer.seconds : timer.seconds;
     timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
@@ -144,10 +150,10 @@ cardsArray.forEach((card) => {
         if (firstClick) {
             startTimer();
             // Set firstClick to false so the timer won't start again
-            firstClick = false; 
+            firstClick = false;
         }
         card.classList.add("clicked");
-        
+
         //Test
         console.log(true);
 
@@ -218,7 +224,7 @@ function Restart() {
     // Reset timer
     resetTimer();
     // Reset firstClick to true for the next game
-    firstClick = true; 
+    firstClick = true;
 }
 
 // End of reset game
