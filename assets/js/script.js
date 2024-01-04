@@ -37,11 +37,26 @@ function showInstructions() {
     };
 }
 
-// Play music game
-let audio = new Audio("../audio/pokemom-instrumental.mp3");
-audio.play();
+// Music Settings
+// Music Settings slider
+function sliderChange(value) {
+    document.getElementById("sliderValue").textContent = value;
+}
 
-// End of music
+// Play music game
+let audio = new Audio("assets/audio/music.mp3");
+// Default volume 50%
+audio.volume = 0.5;
+
+function sliderChange(value) {
+    let volume = value / 100; 
+    // Set the volume to the audio
+    audio.volume = volume; // Set the volume of the audio
+    // Update the display value
+    document.getElementById("sliderValue").textContent = value; // Update the display value
+}
+
+// End of Music Settings
 
 // shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
