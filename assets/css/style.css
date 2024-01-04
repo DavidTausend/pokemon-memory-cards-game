@@ -107,7 +107,7 @@ p {
     justify-content: center;
     height: 165px;
     width: 120px;
-    background-image: url(../images/cards/card.jpg);
+    background-image: url(../images/cards/card.png);
     background-size: cover;
     border-radius: 0.5rem;
     cursor: pointer;
