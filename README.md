@@ -92,6 +92,8 @@ The Pokémon Memory Card Game, with its user-centered design, offers a simple, f
 
 ## Features
 
+### Music
+
 ### Score
 
 Reminder:
@@ -102,6 +104,8 @@ Doesn't got minus.
 ### Timer
 
 ### Schuffle cards
+
+
 
 ### Future Implementations
 
