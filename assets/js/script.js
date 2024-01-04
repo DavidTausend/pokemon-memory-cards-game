@@ -1,3 +1,12 @@
+function showInstructions() {
+
+}
+
+function musicSettings() {
+
+
+}
+
 // Play music game
 let audio = new Audio("assets/audio/pokemom-instrumental.mp3");
 audio.play();
