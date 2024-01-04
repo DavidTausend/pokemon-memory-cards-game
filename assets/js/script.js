@@ -1,5 +1,5 @@
 // Play music game
-let audio = new Audio("../audio/pokemom-instrumental.mp3");
+let audio = new Audio("assets/audio/pokemom-instrumental.mp3");
 audio.play();
 
 // End of music
@@ -57,9 +57,9 @@ function startTimer() {
 
 // Update timer display function
 function updateTimerDisplay() {
-    var timerElement = document.querySelector(".timer");
-    var formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;
-    var formattedSeconds = timer.seconds < 10 ? "0" + timer.seconds : timer.seconds;
+    let timerElement = document.querySelector(".timer");
+    let formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;
+    let formattedSeconds = timer.seconds < 10 ? "0" + timer.seconds : timer.seconds;
     timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
 }
 
@@ -96,11 +96,11 @@ cards.forEach((card) => {
         console.log(true);
 
         if (counter === 0) {
-            firstCard = card.getAttribute("pokemon");
+            firstCard = card.getAttribute("data-pokemon");
             firstCardElement = card;
             counter++;
         } else {
-            secondCard = card.getAttribute("pokemon");
+            secondCard = card.getAttribute("data-pokemon");
 
             if (firstCard === secondCard && firstCardElement !== card) {
                 // Macth Cards
