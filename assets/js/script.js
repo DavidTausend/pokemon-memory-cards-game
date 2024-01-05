@@ -45,9 +45,17 @@ function sliderChange(value) {
 }
 
 // Play music game
-let audio = new Audio("assets/audio/music.mp3");
+let audio = new Audio("../assets/audio/music.mp3");
 // Default volume 50%
 audio.volume = 0.5;
+
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
 
 function sliderChange(value) {
     let volume = value / 100;

@@ -219,7 +219,7 @@ img {
     h1,
     h2,
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   
     header {
@@ -228,6 +228,15 @@ img {
 
     .cards {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .actions button, #button-container button, .play-again-button button {
+        padding: 10px 20px; /* smaller buttons */
+        font-size: medium;
+    }
+
+    .window-content {
+        width: 80%; /* larger window content for smaller screens */
     }
 }
 
@@ -242,6 +251,10 @@ img {
   
     header {
       padding: 1rem 1rem;
+    }
+
+    .window-content {
+        width: 80%; /* larger window content for smaller screens */
     }
 
 }
