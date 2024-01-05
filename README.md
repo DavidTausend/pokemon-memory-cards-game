@@ -76,19 +76,57 @@ The Pokémon Memory Card Game, with its user-centered design, offers a simple, f
 
 #### User goals
 
+- Users seek a fun and challenging memory card game with familiar Pokemon characters.
+- The game should be easy to understand with clear instructions, suitable for all ages.
+- Expectations include clickable cards, responsive buttons, and an interactive interface.
+- Desirable for an enriched gaming experience.
+- Users want to see and improve their scores during gameplay.
+
 #### Company goals
+
+- Aim to keep users engaged and encourage repeated plays.
+- Leverage Pokemon themes to appeal to a broad audience and enhance brand recognition.
+- Ensure the game is accessible to users of varying abilities.
+- Use user feedback for game enhancement.
+- Ensure seamless performance across various devices.
+- Utilize the game for brand promotion and marketing.
 
 ## Design
 
-### Typography
-
 ### Color Scheme
+
+The game's color scheme is dynamic and engaging, drawing from the colorful Pokemon universe: 
+
+- Primary Background: Dark blue (#12181f), offering a striking contrast.
+- Text Color: White (#FFFFFF) for readability against the dark background.
+- Button Color: Bold red (#FF0000) with white text, highlighting interactivity.
+- Card Background: Neutral, emphasizing the colorful Pokemon images.
+- Modal Background: Black (#000000), ensuring focus on content.
+- Interactive Elements: Include hover effects and animations for engagement.
 
 ### Components
 
+The game incorporates various UI components, each contributing to an engaging user experience:
+
+1. Header Section: Includes the game title, a welcome message, and a responsive image.
+
+2. Main Game Area: Features a card grid, a timer, a score counter, and action buttons like "Start Game," "Instructions," and "Music Settings."
+
+3. Card Elements: Interactive Pokemon cards with flip and shake animations.
+
+4. Modal Windows: Instruction and music setting modals with overlay design.
+
+5. Responsive Design: Media queries for adaptability across devices.
+
+6. Interactive Buttons: For various game actions, styled to match the game theme.
+
 ### Imagery
 
+The Pokemon Memory Card Game uses themed imagery, like hidden Pokemon in the header and individual Pokemon on cards, to create an engaging experience. Images adapt responsively across devices, ensuring a consistent and visually appealing interface for the game.
+
 ### Wireframes
+
+Wireframes for the Pokemon Memory Card Game detail the layout and user interaction. They include the game area, action buttons, and modals for instructions and music, guiding the development of a cohesive, user-friendly interface.
 
 ## Features
 

@@ -231,12 +231,13 @@ img {
     }
 
     .actions button, #button-container button, .play-again-button button {
-        padding: 10px 20px; /* smaller buttons */
+        /* smaller buttons */
+        padding: 10px 20px; 
         font-size: medium;
     }
 
     .window-content {
-        width: 80%; /* larger window content for smaller screens */
+        width: 80%; 
     }
 }
 
@@ -254,9 +255,8 @@ img {
     }
 
     .window-content {
-        width: 80%; /* larger window content for smaller screens */
+        width: 80%; 
     }
-
 }
 
 /* Media query: larger devices (992px and up) */
