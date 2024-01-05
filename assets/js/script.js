@@ -204,8 +204,8 @@ cardsArray.forEach((card) => {
                     setTimeout(() => {
                         card.classList.remove("shake");
                         firstCardElement.classList.remove("shake");
-                    }, 1000);
-                }, 1000);
+                    }, 800);
+                }, 800);
             }
 
             counter = 0;
@@ -220,6 +220,7 @@ function incrementScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = oldScore + 100;
 
+
 }
 
 //Decrease score by 100
@@ -232,6 +233,35 @@ function descreaseScore() {
 
 }
 
+// User wins the game
+
+let winnerWindow = document.getElementById("winner");
+
+function winnerMessage() {
+
+    winnerWindow.style.display = "block";
+
+    span.onclick = function () {
+        winnerWindow.style.display = "none";
+    };
+
+    winnerWindow.onclick = function (event) {
+        if (event.target == winnerWindow) {
+           winnerWindow.style.display = "none";
+        }
+    };
+}
+
+let matchedCards = 0;
+
+function checkForWin() {
+    if (matchedCards === 8) {
+        winnerMessage();
+    }
+}
+
+// End of win user
+
 // End of scores
 
 // Reset game
@@ -239,6 +269,8 @@ function Restart() {
     // Reset score
     document.getElementById("score").innerText = 0;
     // Reset cards
+    // Reset matched cards
+    matchedCards = 0;
     selectAndDisplayCards();
     // Reset timer
     resetTimer();
