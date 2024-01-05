@@ -229,9 +229,26 @@ function incrementScore() {
 //Decrease score by 100
 function descreaseScore() {
 
+    if (currentScore >= 100) {
+        addTimeToTimer(15);  
+    }
+
+    // It will not go minus
     currentScore = Math.max(0, currentScore - 100);
     document.getElementById("score").innerText = currentScore;
 
+}
+
+function addTimeToTimer(secondsToAdd) {
+    timer.seconds += secondsToAdd;
+
+    // Handle minute rollover
+    while (timer.seconds >= 60) {
+        timer.minutes++;
+        timer.seconds -= 60;
+    }
+
+    updateTimerDisplay();
 }
 
 // User wins the game
@@ -268,7 +285,7 @@ function checkForWin() {
 // End of scores
 
 // Reset game
-function Restart() {
+function restart() {
     // Reset score
     document.getElementById("score").innerText = 0;
     // Reset cards
@@ -280,6 +297,21 @@ function Restart() {
     resetTimer();
     // Reset firstClick to true for the next game
     firstClick = true;
+    // Close winning window
+    closeWinnerWindow();
 }
+
+// Play again feature
+// Close Winner Window
+function closeWinnerWindow() {
+    let winnerWindow = document.getElementById("winner");
+    winnerWindow.style.display = "none";
+}
+
+let closeWindow = document.getElementsByClassName("close-window")[0];
+if (closeWindow) {
+    closeWindow.onclick = closeWinnerWindow;
+}
+
 
 // End of reset game

@@ -29,7 +29,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     text-align: center;
 }
 
@@ -185,6 +184,21 @@ p {
     background-color: red;
     color: white;
     margin-bottom: 1rem;
+}
+
+.play-again-button {
+    display: flex;
+    justify-content: center;
+}
+
+.play-again-button button {
+    padding: 0.7rem 3rem;
+    font-size: large;
+    border-radius: 0.8rem;
+    background-color: red;
+    color: white;
+    margin-bottom: 1rem;
+    width: 40%;
 }
 
 /* Media query: small screens cellphones (480px and up) */
