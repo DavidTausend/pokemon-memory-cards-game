@@ -5,7 +5,7 @@ let instructionsWindow = document.getElementById("instructions");
 let span = document.getElementsByClassName("close-window")[0];
 
 function showInstructions() {
-    
+
     // Open the instructions window (model)
     instructionsWindow.style.display = "block";
 
@@ -104,6 +104,17 @@ function selectAndDisplayCards() {
 
         cardElement.appendChild(imgElement);
         cardContainer.appendChild(cardElement);
+
+    });
+    attachCardEventListeners();
+}
+
+function attachCardEventListeners() {
+    const cards = document.getElementsByClassName("card");
+    cardsArray = Array.from(cards); // Update the global cardsArray
+
+    cardsArray.forEach((card) => {
+        card.addEventListener("click", cardClickHandler);
     });
 }
 
@@ -155,81 +166,71 @@ function resetTimer() {
 
 // End of timer game
 
-// Cards code
-let counter = 0;
-let firstCard = "";
-let secondCard = "";
+let firstCard = null;
+let secondCard = null;
 let firstCardElement = null;
+counter = 0;
 
-const cards = document.getElementsByClassName("card");
-let cardsArray = Array.from(cards);
+function cardClickHandler() {
+    let clickedCard = this;
 
-// Card is clicked
-// Convernt to an array
-cardsArray.forEach((card) => {
-    card.addEventListener("click", () => {
-        if (firstClick) {
-            startTimer();
-            // Set firstClick to false so the timer won't start again
-            firstClick = false;
-        }
-        card.classList.add("clicked");
+    if (firstClick) {
+        startTimer();
+        firstClick = false;
+    }
+    clickedCard.classList.add("clicked");
 
-        //Test
-        console.log(true);
+    if (counter === 0) {
+        firstCard = clickedCard.getAttribute("data-pokemon");
+        firstCardElement = clickedCard;
+        counter++;
+    } else {
+        secondCard = clickedCard.getAttribute("data-pokemon");
 
-        if (counter === 0) {
-            firstCard = card.getAttribute("data-pokemon");
-            firstCardElement = card;
-            counter++;
+        if (firstCard === secondCard && firstCardElement !== clickedCard) {
+            // Match Cards
+            clickedCard.classList.add("checked");
+            firstCardElement.classList.add("checked");
+
+            matchedCards++;
+            checkForWin();
+            incrementScore();
         } else {
-            secondCard = card.getAttribute("data-pokemon");
-
-            if (firstCard === secondCard && firstCardElement !== card) {
-                // Macth Cards
-                card.classList.add("checked");
-                firstCardElement.classList.add("checked");
-                // If the cards macht increments the score
-                incrementScore();
-                console.log(firstCardElement);
-            } else {
-                // No match, shake and hide card
+            // No match, shake and hide card
+            setTimeout(() => {
+                clickedCard.classList.remove("clicked");
+                firstCardElement.classList.remove("clicked");
+                clickedCard.classList.add("shake");
+                firstCardElement.classList.add("shake");
+                descreaseScore();
                 setTimeout(() => {
-                    card.classList.remove("clicked");
-                    firstCardElement.classList.remove("clicked");
-                    card.classList.add("shake");
-                    firstCardElement.classList.add("shake");
-                    descreaseScore();
-                    // Remove shake class after animation
-                    setTimeout(() => {
-                        card.classList.remove("shake");
-                        firstCardElement.classList.remove("shake");
-                    }, 800);
+                    clickedCard.classList.remove("shake");
+                    firstCardElement.classList.remove("shake");
                 }, 800);
-            }
-
-            counter = 0;
+            }, 800);
         }
-    });
-});
+
+        counter = 0;
+    }
+}
+
 
 //Scores code (Love math)
+
+let currentScore = 0;
 //Increments score by 100
 function incrementScore() {
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = oldScore + 100;
-
+    currentScore += 100;
+    document.getElementById("score").innerText = currentScore;
 
 }
 
 //Decrease score by 100
 function descreaseScore() {
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    // Score will decrease but doesn't go minus
-    let newScore = oldScore - 100 < 0 ? 0 : oldScore - 100;
-    document.getElementById("score").innerText = newScore;
+    currentScore = Math.max(0, currentScore - 100);
+    document.getElementById("score").innerText = currentScore;
 
 }
 
@@ -247,7 +248,7 @@ function winnerMessage() {
 
     winnerWindow.onclick = function (event) {
         if (event.target == winnerWindow) {
-           winnerWindow.style.display = "none";
+            winnerWindow.style.display = "none";
         }
     };
 }
@@ -272,6 +273,7 @@ function Restart() {
     // Reset matched cards
     matchedCards = 0;
     selectAndDisplayCards();
+    attachCardEventListeners();
     // Reset timer
     resetTimer();
     // Reset firstClick to true for the next game
