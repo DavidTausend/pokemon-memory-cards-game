@@ -99,7 +99,7 @@ function selectAndDisplayCards() {
         cardElement.setAttribute("data-pokemon", pokemon);
 
         const imgElement = document.createElement("img");
-        imgElement.src = `assets/images/cards/${pokemon}.png`;
+        imgElement.src = `assets/images/cards/${pokemon}.webp`;
         imgElement.alt = `${pokemon} pokemon`;
 
         cardElement.appendChild(imgElement);
@@ -312,6 +312,5 @@ let closeWindow = document.getElementsByClassName("close-window")[0];
 if (closeWindow) {
     closeWindow.onclick = closeWinnerWindow;
 }
-
 
 // End of reset game

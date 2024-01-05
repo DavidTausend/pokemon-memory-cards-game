@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Content wrapper */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
     min-height: 100vh;
     min-width: 100vh;
@@ -17,12 +24,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 75vh;
     text-align: center;
 }
 
 header img {
-    width: 60%;
+    width: 52%;
 }
 
 main {
@@ -82,7 +89,7 @@ p {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
 }
 
 /* Close Button */
@@ -118,7 +125,7 @@ p {
     justify-content: center;
     height: 165px;
     width: 120px;
-   background-image: url(../images/cards/card.png);
+   background-image: url(../images/cards/card.webp);
     background-size: cover;
     border-radius: 0.5rem;
     cursor: pointer;
