@@ -72,7 +72,7 @@ function shuffleArray(array) {
 // Select the pokemon cards and display them
 function selectAndDisplayCards() {
     // Pokemon List
-    const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "jiglypuff", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu", "squirtle"];
+    const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu"];
 
     // Select randomly 8 pokemons
     let selectedPokemon = [];
@@ -111,7 +111,7 @@ function selectAndDisplayCards() {
 
 function attachCardEventListeners() {
     const cards = document.getElementsByClassName("card");
-    cardsArray = Array.from(cards); // Update the global cardsArray
+    cardsArray = Array.from(cards);
 
     cardsArray.forEach((card) => {
         card.addEventListener("click", cardClickHandler);
@@ -256,8 +256,10 @@ function winnerMessage() {
 let matchedCards = 0;
 
 function checkForWin() {
-    if (matchedCards === 8) {
+    if (matchedCards === 9) {
         winnerMessage();
+        // Stop timer
+        resetTimer();
     }
 }
 
