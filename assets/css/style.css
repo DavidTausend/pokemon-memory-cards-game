@@ -51,6 +51,11 @@ p {
     margin-bottom: 2rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .actions {
     display: flex;
     flex-direction: column;
@@ -208,37 +213,45 @@ p {
     width: 40%;
 }
 
-/* Media query: small screens cellphones (480px and up) */
-@media screen and (max-width: 480px) {
+/* Media query for extra small devices (phones, less than 768px) */
+@media only screen and (max-width: 767px) {
 
+    h1,
     h2,
     p {
-        font-size: 1rem;
+      font-size: 1.5rem;
     }
-
+  
     header {
-        padding: 1rem 0.5rem;
-    }
-}
-
-/* Media query: medium screens tables */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-
-    h2,
-    p {
-        font-size: 1.5rem;
+      padding: 1rem 0.5rem;
     }
 
-    header {
-        padding: 1rem 1rem;
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Media query: larger screens laptops and tables (769px and up) */
-@media screen and (min-width: 769px) {}
+@media screen and (min-width: 769px) {
+
+    h1,
+    h2,
+    p {
+      font-size: 2rem;
+    }
+  
+    header {
+      padding: 1rem 1rem;
+    }
+
+}
 
 /* Media query: larger devices (992px and up) */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    
+}
 
 /* Media query: larger screen devices (1200px and up) */
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+
+}

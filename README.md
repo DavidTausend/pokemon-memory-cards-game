@@ -123,6 +123,40 @@ Doesn't got minus.
 
 [Github](https://github.com/): Github was essential for repository hosting, enabling code sharing, and project management.
 
+[Favicon](https://www.flaticon.com/): Flaticon provided a range of social media icons suitable for use as favicons on the site.
+
+[Mycolor](https://mycolor.space/): Assisted in selecting a cohesive color palette, significantly impacting the website's aesthetic and user experience.
+
+[Tiny](https://tinypng.com/): TinyPNG was instrumental in compressing images for the web, reducing file sizes without substantial quality loss and improving website loading times.
+
+[Git](https://git-scm.com/): Employed for version control, facilitating efficient code changes management and team collaboration.
+
+[ChatGPT](https://chat.openai.com/auth/login): Provided assistance in content creation, spell-checking, and code improvement suggestions, especially in accessibility and semantic naming.
+
+[Shields](https://shields.io/): Used to create and integrate badges into the README for enhanced project documentation.
+
+[Resize images](https://www.iloveimg.com/resize-image): Utilized for resizing images, ensuring they fit well within the website's design while maintaining quality. This tool was crucial for optimizing images for different screen sizes and improving the overall visual presentation of the site.
+
+[Am I Responsive](https://ui.dev/amiresponsive): This tool was used to display how the website looks across different devices, ensuring responsive design.
+
+[Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de): Employed for auditing the website's performance, accessibility, and SEO, providing insights for improvements and optimizations.
+
+[Wave](https://wave.webaim.org/): Used for assessing website accessibility, Wave helped identify and rectify accessibility issues, ensuring the site's usability for a diverse range of users. This tool was integral in making the website more inclusive and adhering to accessibility standards.
+
+[Preview](https://support.apple.com/de-de/guide/preview/welcome/mac): Preview was utilized for image editing tasks like resizing and color adjustments, as well as for viewing images. Its ease of use and versatility made it a valuable tool in managing and modifying visual assets for the project.
+
+[Slack](https://slack.com): Used for engaging with the Code Institute's online community, Slack was crucial for asking questions, exchanging ideas, and receiving guidance, significantly aiding in the project's development.
+
+[Google Chrome](https://www.google.com/): Key for testing and debugging, Chrome's Developer Tools were essential for live editing and responsive design checks.
+
+[Balsamiq](https://balsamiq.com): Utilized in the initial design phase, Balsamiq helped in creating wireframes, aiding in the visual and structural planning of the website.
+
+https://cloudconvert.com/ico-to-png
+
+https://pythontutor.com/javascript.html#mode=edit
+
+JS Code quality tool: https://jshint.com/
+
 ## Deployment & Local Development
 
 ### Deployment

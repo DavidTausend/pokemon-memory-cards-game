@@ -10,11 +10,14 @@
     <meta name="keywords" content="Pokemon, Pokemon cards, cards, card, card memory game, game" />
     <meta name="author" content="David Tausend" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/pokeball.png" />
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Title -->
-    <title>Memory cards start</title>
+    <title>Pokemon Memory Card Game</title>
 </head>
 
 <body>
@@ -26,7 +29,11 @@
 
         <p>Can you remember what's hiding there?</p>
 
-        <img src="assets/images/hidden_pokemon.webp" alt="Hidden pokemons">
+        <img srcset="
+              assets/images/pictures/hidden_pokemon_large.webp  1024w,
+              assets/images/pictures/hidden_pokemon_medium.webp  640w,
+              assets/images/pictures/hidden_pokemon_small.webp    320w
+            " sizes="(min-width: 36em) 60vw, 100vw" src="assets/images/pictures/hidden_pokemon_small.webp" alt="Hidden pokemons" />
 
     </header>
     <main>

@@ -1,4 +1,3 @@
-/* JS Code quality tool: https://jshint.com/ */
 /* https://www.w3schools.com/w3css/w3css_modal.asp */
 
 let instructionsWindow = document.getElementById("instructions");
