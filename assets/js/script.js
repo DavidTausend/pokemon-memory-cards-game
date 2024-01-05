@@ -60,14 +60,23 @@ function sliderChange(value) {
 
 // End of Music Settings
 
-// Ask mentor
+// shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Select the pokemon cards and display them
 function selectAndDisplayCards() {
     // Pokemon List
     const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "jiglypuff", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu", "squirtle"];
 
     // Select randomly 8 pokemons
     let selectedPokemon = [];
-    while (selectedPokemon.length < 8) {
+    while (selectedPokemon.length < 9) {
         const randomIndex = Math.floor(Math.random() * allPokemon.length);
         const pokemon = allPokemon[randomIndex];
         if (!selectedPokemon.includes(pokemon)) {
@@ -79,34 +88,29 @@ function selectAndDisplayCards() {
 
     // Shuffle the cards
     shuffleArray(selectedPokemon);
-}
 
-// shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-// Cards generator: https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1
-// Shuffle cards
-function shuffleCards() {
     const cardContainer = document.getElementsByClassName("cards")[0];
-    let cards = Array.from(cardContainer.children);
-    cards = shuffleArray(cards);
-    cards.forEach(card => cardContainer.appendChild(card));
+    // Clear existing cards
+    cardContainer.innerHTML = '';
+
+    selectedPokemon.forEach(pokemon => {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+        cardElement.setAttribute("data-pokemon", pokemon);
+
+        const imgElement = document.createElement("img");
+        imgElement.src = `assets/images/cards/${pokemon}.png`;
+        imgElement.alt = `${pokemon} pokemon`;
+
+        cardElement.appendChild(imgElement);
+        cardContainer.appendChild(cardElement);
+    });
 }
 
-// Calls shuffleCards function when the page loads
-window.onload = shuffleCards;
-
-// End of cards shuffle
+window.onload = selectAndDisplayCards();
 
 
 //Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
-
 // Timer variables
 let timer = {
     minutes: 0,
@@ -235,9 +239,7 @@ function Restart() {
     // Reset score
     document.getElementById("score").innerText = 0;
     // Reset cards
-    cardsArray.forEach((card) => {
-        card.classList.remove("checked", "clicked", "shake");
-    });
+    selectAndDisplayCards();
     // Reset timer
     resetTimer();
     // Reset firstClick to true for the next game
