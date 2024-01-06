@@ -1,9 +1,9 @@
 /* https://www.w3schools.com/w3css/w3css_modal.asp */
 
-let instructionsWindow = document.getElementById("instructions");
-let span = document.getElementsByClassName("close-window")[0];
-
 function showInstructions() {
+
+    let instructionsWindow = document.getElementById("instructions");
+    let span = document.getElementsByClassName("close-window")[0];
 
     // Open the instructions window (model)
     instructionsWindow.style.display = "block";
@@ -21,9 +21,12 @@ function showInstructions() {
     }
 }
 
-let musicSettingsWindow = document.getElementById("music");
+
 
 function musicSettings() {
+
+    let musicSettingsWindow = document.getElementById("music");
+    let span = document.getElementsByClassName("close-window")[0];
 
     musicSettingsWindow.style.display = "block";
 
@@ -39,11 +42,6 @@ function musicSettings() {
 }
 
 // Music Settings
-// Music Settings slider
-function sliderChange(value) {
-    document.getElementById("sliderValue").textContent = value;
-}
-
 // Play music game
 let audio = new Audio("../assets/audio/music.mp3");
 // Default volume 50%
@@ -64,7 +62,6 @@ function sliderChange(value) {
     // Update the display value
     document.getElementById("sliderValue").textContent = value; // Update the display value
 }
-
 // End of Music Settings
 
 // shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -127,7 +124,6 @@ function attachCardEventListeners() {
 
 window.onload = selectAndDisplayCards();
 
-
 //Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
 // Timer variables
 let timer = {
@@ -170,7 +166,6 @@ function resetTimer() {
     timer.seconds = 0;
     updateTimerDisplay();
 }
-
 // End of timer game
 
 let firstCard = null;
@@ -221,9 +216,7 @@ function cardClickHandler() {
     }
 }
 
-
 //Scores code (Love math)
-
 let currentScore = 0;
 //Increments score by 100
 function incrementScore() {
@@ -237,7 +230,7 @@ function incrementScore() {
 function descreaseScore() {
 
     if (currentScore >= 100) {
-        addTimeToTimer(15);  
+        addTimeToTimer(15);
     }
 
     // It will not go minus
@@ -259,7 +252,6 @@ function addTimeToTimer(secondsToAdd) {
 }
 
 // User wins the game
-
 let winnerWindow = document.getElementById("winner");
 
 function winnerMessage() {
@@ -286,10 +278,7 @@ function checkForWin() {
         resetTimer();
     }
 }
-
 // End of win user
-
-// End of scores
 
 // Reset game
 function restart() {
@@ -319,5 +308,4 @@ let closeWindow = document.getElementsByClassName("close-window")[0];
 if (closeWindow) {
     closeWindow.onclick = closeWinnerWindow;
 }
-
 // End of reset game
