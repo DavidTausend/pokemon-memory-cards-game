@@ -195,6 +195,8 @@ https://pythontutor.com/javascript.html#mode=edit
 
 JS Code quality tool: https://jshint.com/
 
+Web Vitals
+
 ## Deployment & Local Development
 
 ### Deployment
