@@ -1,5 +1,7 @@
 <h1 align="center">Gotta catch 'em all!</h1>
 
+<img src="assets/images/pictures/hidden_pokemon_large.webp" alt="A decorative picture featuring the pokemon memory game">
+
 <h3 align="center"><a href="https://davidtausend.github.io/card-memory-game/">➡️ View the live project here ⬅️</a></h3>
 
 <br/>
@@ -19,13 +21,16 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [User goals](#user-goals)
     + [Company goals](#company-goals)
 - [Design](#design)
-  * [Typography](#typography)
   * [Color Scheme](#color-scheme)
   * [Components](#components)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
 - [Features](#features)
+  * [Music](#music)
   * [Score](#score)
+  * [Reset Game](#reset-game)
+  * [Timer](#timer)
+  * [Schuffle cards](#schuffle-cards)
   * [Future Implementations](#future-implementations)
 - [Technologies](#technologies)
   * [Programming Languages](#programming-languages)
@@ -132,6 +137,8 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ### Music
 
+Music plays a significant role in enhancing the gameplay experience. A background track adds to the game's ambiance, creating an engaging atmosphere. Players have control over the music with features to play, pause, and adjust the volume. This functionality not only personalizes the experience but also makes the game more accessible and enjoyable for all users, regardless of their audio preferences.
+
 ### Score
 
 Reminder:
@@ -139,11 +146,17 @@ Doesn't got minus.
 
 ### Reset Game
 
+The Reset Game feature in the Pokemon Memory Card Game enables players to restart their game, resetting the score, reshuffling cards, and resetting the timer, ensuring a fresh gameplay experience each time.
+
 ### Timer
+
+In the Pokemon Memory Card Game, a timer starts with the first card flip, displaying time in minutes and seconds. It adds an element of challenge, allowing players to track their speed. The timer resets for each new game, ensuring consistent time tracking.
 
 ### Schuffle cards
 
+The game shuffles the Pokemon cards before each round, ensuring a unique and challenging experience each time. This randomization is key to the memory aspect of the game, as it prevents memorization of card positions from previous games.
 
+### Keyboard
 
 ### Future Implementations
 
@@ -201,8 +214,6 @@ Web Vitals
 
 ### Deployment
 
-### Local Development
-
 The site is deployed using GitHub Pages - [card-memory-game](https://davidtausend.github.io/card-memory-game/)
 
 To deploy the site using GitHub Pages:
@@ -214,6 +225,8 @@ To deploy the site using GitHub Pages:
 5. From the source dropdown, select the "main" branch and press save.
 
 The site has now been deployed. Please note that this process may take a few minutes before the site goes live.
+
+### Local Development
 
 #### How to Fork
 
@@ -252,17 +265,28 @@ After making changes to your local copy, you can commit and push them to GitHub:
 
 ##### HTML
 
+<div align="center"><img src="assets/images/readme/testing/html_validator.webp"></div>
+
 ##### CSS
+
+<div align="center"><img src="assets/images/readme/testing/css_validator.webp"></div>
 
 #### LightHouse
 
 ##### Desktop
 
+<div align="center"><img src="assets/images/readme/testing/lighthouse_desktop.webp"></div>
+
 ##### Mobile
+
+<div align="center"><img src="assets/images/readme/testing/lighthouse_mobile.webp"></div>
 
 ##### Improvements
 
 ##### Final Score
+
+<div align="center"><img src="assets/images/readme/testing/lighthouse_desktop_final.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/lighthouse_mobile_final.webp"></div>
 
 ##### Accessibility
 
@@ -283,6 +307,12 @@ After making changes to your local copy, you can commit and push them to GitHub:
 #### Full Testing
 
 ##### Devices
+
+- 24-inch Desktop Monitor
+- 13-inch MacBook Pro
+- 11 inch iPad Pro
+- iPhone 14 PRO Max
+- Samsung S20 Ultra
 
 ##### Browsers
 
@@ -317,3 +347,5 @@ After making changes to your local copy, you can commit and push them to GitHub:
 ### Acknowledgments
 
 - My Mentor,[Matt Bodden](https://github.com/MattBCoding): For his invaluable guidance, feedback, and support throughout the project.
+
+[Back to Top ^](#introduction)

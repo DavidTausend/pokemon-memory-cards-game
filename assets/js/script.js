@@ -332,6 +332,12 @@ function selectCard() {
     const cards = Array.from(document.getElementsByClassName("card"));
     cards[currentFocusIndex].click();
 }
+// End of Keyboard feature
+
+// Scoure list 
+function saveScore() {
+
+} 
 
 // Reset game
 function restart() {

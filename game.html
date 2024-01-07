@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Meta tags for search engines -->
-     <meta name="description" content="Pokemon Mermory Card Game" />
-     <meta name="keywords" content="Pokemon, Pokemon cards, cards, card, card memory game, game" />
-     <meta name="author" content="David Tausend" />
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Pokemon Mermory Card Game" />
+    <meta name="keywords" content="Pokemon, Pokemon cards, cards, card, card memory game, game" />
+    <meta name="author" content="David Tausend" />
 
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/pikachu.png" />
 
     <!-- Stylesheet -->
@@ -83,7 +83,11 @@
         <div id="winner" class="window">
             <div class="window-content">
                 <span class="close-window">&times;</span>
-                <p>Congratulations! You won!</p>
+                <h2>Congratulations! You won!</h2>
+                <div id="highScores" class="high-scores">
+                    <p>High Scores</p>
+                    <ul id="highScoreList"></ul>
+                </div>
                 <div class="play-again-button">
                     <button onclick="restart()">Play Again</button>
                 </div>

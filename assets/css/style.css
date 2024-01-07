@@ -205,6 +205,16 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.high-scores {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#highScoreList {
+    list-style-type: none;
+    padding: 0;
+}
+
 .play-again-button {
     display: flex;
     justify-content: center;
