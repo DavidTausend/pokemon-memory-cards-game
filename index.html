@@ -40,7 +40,6 @@
         <div class="actions">
             <button onclick="location.href='game.html'">Start Game</button>
             <button onclick="showInstructions()">Instructions</button>
-            <button onclick="musicSettings()">Music Settings</button>
         </div>
 
         <!-- Instructions Window -->
@@ -51,19 +50,6 @@
                 <p></p>
             </div>
         </div>
-
-        <!-- Music Window -->
-        <div id="music" class="window">
-            <div class="window-content">
-                <span class="close-window">&times;</span>
-                <h2>Music Settings</h2>
-                <!-- https://www.youtube.com/watch?v=qCEBXzC3tcs* -->
-                <input type="range" id="musicSlider" min="0" max="100" value="50" oninput="sliderChange(this.value)">
-                <p>Volumen: <span id="sliderValue">50</span></p>
-
-            </div>
-        </div>
-
     </main>
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>

@@ -1,5 +1,4 @@
 /* https://www.w3schools.com/w3css/w3css_modal.asp */
-
 function showInstructions() {
 
     let instructionsWindow = document.getElementById("instructions");
@@ -21,8 +20,7 @@ function showInstructions() {
     }
 }
 
-
-
+// Music Settings
 function musicSettings() {
 
     let musicSettingsWindow = document.getElementById("music");
@@ -41,7 +39,6 @@ function musicSettings() {
     };
 }
 
-// Music Settings
 // Play music game
 let audio = new Audio("../assets/audio/music.mp3");
 // Default volume 50%
@@ -111,7 +108,14 @@ function selectAndDisplayCards() {
 
     });
     attachCardEventListeners();
+
+    // Focus the first card for the keyboard
+    if (cardsArray.length > 0) {
+        cardsArray[0].focus();
+    }
 }
+
+let currentFocusIndex = 0;
 
 function attachCardEventListeners() {
     const cards = document.getElementsByClassName("card");
@@ -120,6 +124,8 @@ function attachCardEventListeners() {
     cardsArray.forEach((card) => {
         card.addEventListener("click", cardClickHandler);
     });
+    // Focus index to 0
+    currentFocusIndex = 0;
 }
 
 window.onload = selectAndDisplayCards();
@@ -279,6 +285,53 @@ function checkForWin() {
     }
 }
 // End of win user
+
+// Keyboard feature
+document.addEventListener('keydown', function(event) {
+    switch(event.key) {
+        case 'ArrowUp':
+            moveFocus('up');
+            break;
+        case 'ArrowDown':
+            moveFocus('down');
+            break;
+        case 'ArrowLeft':
+            moveFocus('left');
+            break;
+        case 'ArrowRight':
+            moveFocus('right');
+            break;
+        case 'Enter':
+            selectCard();
+            break;
+    }
+});
+
+function moveFocus(direction) {
+    const cards = Array.from(document.getElementsByClassName("card"));
+    const gridSize = Math.ceil(Math.sqrt(cards.length)); // Adjust for non-square grids
+
+    let row = Math.floor(currentFocusIndex / gridSize);
+    let col = currentFocusIndex % gridSize;
+
+    switch(direction) {
+        case 'up': row = Math.max(0, row - 1); break;
+        case 'down': row = Math.min(gridSize - 1, row + 1); break;
+        case 'left': col = Math.max(0, col - 1); break;
+        case 'right': col = Math.min(gridSize - 1, col + 1); break;
+    }
+
+    // Calculate new index and ensure it's within the bounds of the array
+    let newIndex = row * gridSize + col;
+    currentFocusIndex = Math.min(Math.max(0, newIndex), cards.length - 1);
+
+    cards[currentFocusIndex].focus();
+}
+
+function selectCard() {
+    const cards = Array.from(document.getElementsByClassName("card"));
+    cards[currentFocusIndex].click();
+}
 
 // Reset game
 function restart() {

@@ -197,6 +197,14 @@ img {
     margin-bottom: 1rem;
 }
 
+.card:focus {
+    outline: none;
+    border: 3px solid #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .play-again-button {
     display: flex;
     justify-content: center;
