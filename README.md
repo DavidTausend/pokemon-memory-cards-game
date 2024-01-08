@@ -104,7 +104,7 @@ The game's color scheme is dynamic and engaging, drawing from the colorful Pokem
 
 - Primary Background: Dark blue (#12181f), offering a striking contrast.
 - Text Color: White (#FFFFFF) for readability against the dark background.
-- Button Color: Bold red (#FF0000) with white text, highlighting interactivity.
+- Button Color: Dark red (#D32F2F) with white text, highlighting interactivity.
 - Card Background: Neutral, emphasizing the colorful Pokemon images.
 - Modal Background: Black (#000000), ensuring focus on content.
 - Interactive Elements: Include hover effects and animations for engagement.

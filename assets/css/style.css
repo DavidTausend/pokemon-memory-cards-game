@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     min-width: 100vh;
     background-color: #12181f;
-    color: white;
+    color: #EDEDED;
 }
 
 header {
@@ -25,6 +25,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #EDEDED;
 }
 
 header img {
@@ -36,6 +37,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #EDEDED
 }
 
 h1 {
@@ -65,8 +67,8 @@ img {
     padding: 0.7rem 3rem;
     font-size: large;
     border-radius: 0.8rem;
-    background-color: #FF0000;
-    color: white;
+    background-color: #D32F2F;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -88,7 +90,8 @@ img {
 
 /* Window Content */
 .window-content {
-    background-color: black;
+    color: #ffffff;
+    background-color: #333;
     /* Centered */
     margin: 15% auto;
     padding: 20px;
@@ -106,7 +109,7 @@ img {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #333;
     text-decoration: none;
     cursor: pointer;
 }
@@ -129,7 +132,7 @@ img {
     justify-content: center;
     height: 165px;
     width: 120px;
-   background-image: url(../images/cards/card.webp);
+    background-image: url(../images/cards/card.webp);
     background-size: cover;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -192,14 +195,16 @@ img {
     padding: 0.7rem 3rem;
     font-size: large;
     border-radius: 0.8rem;
-    background-color: #FF0000;
-    color: white;
+    background-color: #D32F2F;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
+/* not working */
 .card:focus {
-    outline: none;
-    border: 3px solid #ff0000;
+    outline: 2px solid #FFD700;
+    background-color: #D32F2F;
+    border: 3px solid;
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -224,8 +229,8 @@ img {
     padding: 0.7rem 3rem;
     font-size: large;
     border-radius: 0.8rem;
-    background-color: #FF0000;
-    color: white;
+    background-color: #D32F2F;
+    color: #ffffff;
     margin-bottom: 1rem;
     width: 40%;
 }
