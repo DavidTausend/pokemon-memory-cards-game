@@ -8,8 +8,8 @@
 /* Content wrapper */
 html,
 body {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 body {
@@ -55,7 +55,7 @@ p {
 img {
     width: auto;
     height: auto;
-  }
+}
 
 .actions {
     display: flex;
@@ -75,17 +75,17 @@ img {
 /* The Modal (background) */
 .window {
     /* Hidden */
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     /* Scroll feature */
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Window Content */
@@ -116,7 +116,28 @@ img {
 
 .time-score-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+timer,
+.scores,
+label,
+#sliderValue {
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+input[type="range"] {
+    width: 100px;
+}
+
+label[for="musicSlider"] {
+    margin-right: 5px;
+    font-size: 2rem;
 }
 
 .cards {
@@ -146,10 +167,11 @@ img {
 /* Pokemon card image */
 .card img {
     height: 165px;
-    width: 120px;
+    max-width: 100%;
     border-radius: 10px;
     opacity: 0;
     transition: 0.3s all ease;
+
 }
 
 /* Show card */
@@ -241,25 +263,31 @@ img {
     h1,
     h2,
     p {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  
+
     header {
-      padding: 1rem 0.5rem;
+        padding: 1rem 0.5rem;
     }
 
     .cards {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .actions button, #button-container button, .play-again-button button {
+    .actions button,
+    #button-container button,
+    .play-again-button button {
         /* smaller buttons */
-        padding: 10px 20px; 
+        padding: 10px 20px;
         font-size: medium;
     }
 
     .window-content {
-        width: 80%; 
+        width: 80%;
+    }
+
+    label[for="musicSlider"] {
+        font-size: 1.2rem;
     }
 }
 
@@ -268,25 +296,22 @@ img {
 
     h1,
     h2,
-    p {
-      font-size: 2rem;
+    p, 
+    label {
+        font-size: 2rem;
     }
-  
+
     header {
-      padding: 1rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .window-content {
-        width: 80%; 
+        width: 80%;
     }
 }
 
 /* Media query: larger devices (992px and up) */
-@media screen and (min-width: 992px) {
-    
-}
+@media screen and (min-width: 992px) {}
 
 /* Media query: larger screen devices (1200px and up) */
-@media screen and (min-width: 1200px) {
-
-}
+@media screen and (min-width: 1200px) {}
