@@ -258,9 +258,10 @@ function addTimeToTimer(secondsToAdd) {
 }
 
 // User wins the game
-let winnerWindow = document.getElementById("winner");
-
 function winnerMessage() {
+
+    let winnerWindow = document.getElementById("winner");
+    let span = winnerWindow.querySelector(".close-window"); 
 
     winnerWindow.style.display = "block";
 
@@ -273,6 +274,9 @@ function winnerMessage() {
             winnerWindow.style.display = "none";
         }
     };
+    let playerName = prompt("Enter your name:");
+    saveScore(playerName, currentScore);
+    displayHighScores();
 }
 
 let matchedCards = 0;
@@ -334,15 +338,43 @@ function selectCard() {
 }
 // End of Keyboard feature
 
-// Scoure list 
-function saveScore() {
+// Score list
+function saveScore(name, score) {
+    let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    highScores.push({ name: name, score: score });
+    highScores.sort((a, b) => b.score - a.score);
+    // Top 5 scores
+    highScores = highScores.slice(0, 5);
 
+    localStorage.setItem('highScores', JSON.stringify(highScores));
 } 
+
+// Display high scores
+function displayHighScores() {
+    let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    const highScoreList = document.getElementById('highScoreList');
+    
+    highScoreList.innerHTML = highScores.map(score => `<li>${score.name} - ${score.score}</li>`).join('');
+}
+
+// Enter name when the game ends (love math window)
+// improvement: make it to appear just once
+function onGameEnd() {
+    let playerName = prompt("Enter your name:");
+    saveScore(playerName, currentScore);
+    displayHighScores();
+}
+
+window.onload = function() {
+    selectAndDisplayCards();
+    displayHighScores();
+};
 
 // Reset game
 function restart() {
     // Reset score
-    document.getElementById("score").innerText = 0;
+    currentScore = 0;
+    document.getElementById("score").innerText = currentScore;
     // Reset cards
     // Reset matched cards
     matchedCards = 0;
