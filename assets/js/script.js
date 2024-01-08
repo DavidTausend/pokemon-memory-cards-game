@@ -378,6 +378,15 @@ function restart() {
     // Reset cards
     // Reset matched cards
     matchedCards = 0;
+
+    const cards = Array.from(document.getElementsByClassName("card"));
+    cards.forEach(card => {
+        card.classList.remove("clicked", "checked", "shake");
+        // Reset the image to hidden again
+        const img = card.querySelector("img");
+        if (img) img.style.opacity = '0';
+    });
+
     selectAndDisplayCards();
     attachCardEventListeners();
     // Reset timer
