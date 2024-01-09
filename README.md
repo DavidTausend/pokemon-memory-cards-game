@@ -6,6 +6,12 @@
 
 <br/>
 
+<div align="center">
+
+![W3C Validation]()
+
+</div>
+
 ## Introduction
 
 Experience the fun and challenge of the Pokémon Memory Card Game, designed for all ages with vibrant graphics and beloved Pokémon characters. Start your engaging Pokémon adventure now!
@@ -162,6 +168,42 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 ### Future Implementations
 
+#### Multiplayer Mode
+
+Adding a feature for players to compete against friends.
+
+#### Additional Levels and Difficulty Settings
+
+Implement different levels of difficulty, from easy to hard, catering to various age groups and skill levels.
+
+#### Social Media Integration
+
+ Enabling score sharing and friend invites through social media.
+
+#### Mobile App Version
+
+Creating a mobile app version for on-the-go gaming.
+
+#### Customizable Themes
+
+Allowing players to personalize game themes and card designs.
+
+#### Game Progress Save
+
+Implementing a save feature for pausing and resuming games.
+
+#### Feedback
+
+Creating a platform for players to submit suggestions and feedback.
+
+#### Pokemon API Integration
+
+Incorporating the [PokeAPI](https://pokeapi.co/) to expand the card collection, adding a dynamic and ever-growing range of Pokemon cards to the game. This feature will enrich the game's diversity and appeal to a broader audience of Pokemon enthusiasts.
+
+#### Achievements and Rewards
+
+Implementing a rewards system for achieving certain milestones in the game.
+
 ## Technologies
 
 ### Programming Languages
@@ -204,13 +246,13 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 [Balsamiq](https://balsamiq.com): Utilized in the initial design phase, Balsamiq helped in creating wireframes, aiding in the visual and structural planning of the website.
 
-[Python Tutor](https://pythontutor.com/javascript.html#mode=edit): 
+[Python Tutor](https://pythontutor.com/javascript.html#mode=edit): Used for visualizing JavaScript code execution, aiding in debugging.
 
-[JS Code quality tool](https://jshint.com/):
+[JS Code quality tool](https://jshint.com/): Employed to analyze JavaScript code for errors and enforce coding standards.
 
-[Web Vitals](https://web.dev/articles/vitals?hl=de):
+[Web Vitals](https://web.dev/articles/vitals?hl=de): Monitored the site's performance and user experience metrics.
 
-[Contrast Checker](https://webaim.org/resources/contrastchecker/):
+[Contrast Checker](https://webaim.org/resources/contrastchecker/): Ensured text and background combinations met accessibility standards.
 
 ## Deployment & Local Development
 
@@ -338,11 +380,20 @@ After making changes to your local copy, you can commit and push them to GitHub:
 
 #### External Articles and Guides
 
+youtube.com
+
 #### Community Contributions and Forums
+
+forum.freecodecamp.org
+https://stackoverflow.com/
 
 #### Design and Spacing Techniques
 
-### Software Design Documentation:
+css-tricks.com, youtube.com, w3schools.com
+
+### Software Design Documentation
+
+youtube.com, https://github.com/DavidTausend/tausendlin/blob/main/README.md?plain=1
 
 ### Media
 
