@@ -8,7 +8,8 @@
 
 <div align="center">
 
-![W3C Validation]()
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fdavidtausend.github.io%2Fpokemon-memory-cards-game%2F
+)
 
 </div>
 
@@ -264,6 +265,8 @@ Implementing a rewards system for achieving certain milestones in the game.
 
 [Contrast Checker](https://webaim.org/resources/contrastchecker/): Ensured text and background combinations met accessibility standards.
 
+[esprima](https://esprima.org/demo/validate.html): 
+
 ## Deployment & Local Development
 
 ### Deployment
@@ -321,11 +324,23 @@ After making changes to your local copy, you can commit and push them to GitHub:
 
 <div align="center"><img src="assets/images/readme/testing/html_validator.webp"></div>
 
+The W3C Markup Validator confirms the HTML is error-free, ensuring compliance with web standards, as indicated by the Lighthouse report.
+
 ##### CSS
 
 <div align="center"><img src="assets/images/readme/testing/css_validator.webp"></div>
 
+Validated error-free by the Jigsaw validator, the CSS effectively enhances the site's performance and cross-browser compatibility, as shown in the Lighthouse report.
+
+##### JavaScript
+
+<div align="center"><img src="assets/images/readme/testing/js_validator.webp"></div>
+
+Employed JSHint, a JavaScript Code Quality Tool and the esprima validator confimrs that the JavaScript code passed without any major issues.
+
 #### LightHouse
+
+Lighthouse was employed to evaluate the website's performance, accessibility, best practices, and SEO via Chrome Developer Tools. Future plans include regular Lighthouse audits to continually enhance these aspects, ensuring optimal site efficiency and user experience.
 
 ##### Desktop
 
