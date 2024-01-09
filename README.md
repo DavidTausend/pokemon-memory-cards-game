@@ -2,7 +2,7 @@
 
 <img src="assets/images/pictures/hidden_pokemon_large.webp" alt="A decorative picture featuring the pokemon memory game">
 
-<h3 align="center"><a href="https://davidtausend.github.io/card-memory-game/">➡️ View the live project here ⬅️</a></h3>
+<h3 align="center"><a href="https://davidtausend.github.io/pokemon-memory-cards-game/">➡️ View the live project here ⬅️</a></h3>
 
 <br/>
 
@@ -37,7 +37,17 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
   * [Reset Game](#reset-game)
   * [Timer](#timer)
   * [Schuffle cards](#schuffle-cards)
+  * [Keyboard](#keyboard)
   * [Future Implementations](#future-implementations)
+    + [Multiplayer Mode](#multiplayer-mode)
+    + [Additional Levels and Difficulty Settings](#additional-levels-and-difficulty-settings)
+    + [Social Media Integration](#social-media-integration)
+    + [Mobile App Version](#mobile-app-version)
+    + [Customizable Themes](#customizable-themes)
+    + [Game Progress Save](#game-progress-save)
+    + [Feedback](#feedback)
+    + [Pokemon API Integration](#pokemon-api-integration)
+    + [Achievements and Rewards](#achievements-and-rewards)
 - [Technologies](#technologies)
   * [Programming Languages](#programming-languages)
   * [Applications, Plugins & Tools Used](#applications--plugins---tools-used)
@@ -71,7 +81,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [External Articles and Guides](#external-articles-and-guides)
     + [Community Contributions and Forums](#community-contributions-and-forums)
     + [Design and Spacing Techniques](#design-and-spacing-techniques)
-  * [Software Design Documentation:](#software-design-documentation-)
+  * [Software Design Documentation](#software-design-documentation)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
@@ -149,8 +159,6 @@ Music plays a significant role in enhancing the gameplay experience. A backgroun
 
 ### Score
 
-Reminder:
-Doesn't got minus.
 
 ### Reset Game
 
@@ -165,6 +173,8 @@ In the Pokemon Memory Card Game, a timer starts with the first card flip, displa
 The game shuffles the Pokemon cards before each round, ensuring a unique and challenging experience each time. This randomization is key to the memory aspect of the game, as it prevents memorization of card positions from previous games.
 
 ### Keyboard
+
+
 
 ### Future Implementations
 
@@ -258,12 +268,12 @@ Implementing a rewards system for achieving certain milestones in the game.
 
 ### Deployment
 
-The site is deployed using GitHub Pages - [card-memory-game](https://davidtausend.github.io/card-memory-game/)
+The site is deployed using GitHub Pages - [pokemon-memory-cards-game](https://davidtausend.github.io/pokemon-memory-cards-game/)
 
 To deploy the site using GitHub Pages:
 
 1. Login (or signup) to GitHub.
-2. Go to the repository for this project: [DavidTausend/card-memory-game](https://davidtausend.github.io/card-memory-game/)
+2. Go to the repository for this project: [DavidTausend/pokemon-memory-cards-game](https://davidtausend.github.io/pokemon-memory-cards-game/)
 3. Click the settings button.
 4. Select "Pages" in the left-hand navigation menu.
 5. From the source dropdown, select the "main" branch and press save.
@@ -277,7 +287,7 @@ The site has now been deployed. Please note that this process may take a few min
 To fork the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project: [DavidTausend/card-memory-game](https://davidtausend.github.io/card-memory-game/)
+2. Go to the repository for this project: [DavidTausend/pokemon-memory-cards-game](https://davidtausend.github.io/pokemon-memory-cards-game/)
 3. Click the "Fork" button in the top right corner.
 
 #### How to Clone
@@ -285,7 +295,7 @@ To fork the repository:
 To clone the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project: [DavidTausend/card-memory-game](https://davidtausend.github.io/card-memory-game/)
+2. Go to the repository for this project: [DavidTausend/pokemon-memory-cards-game](https://davidtausend.github.io/pokemon-memory-cards-game/)
 3. Click on the "Code" button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type `git clone` into the terminal and then paste the link you copied in step 3. Press enter.
@@ -342,11 +352,23 @@ After making changes to your local copy, you can commit and push them to GitHub:
 
 | User Goals | How are they achieved? |
 | :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------- |
+|I want an engaging and fun memory game to play.|Implemented a Pokémon-themed card memory game that's both challenging and enjoyable.|
+|I need the game to be accessible on various devices.|Responsive design ensures the game is playable on desktops, tablets, and mobiles.|
+|I want clear instructions on how to play the game.|Added an 'Instructions' button that opens a modal with easy-to-understand game rules.|
+|I want to control the game's background music.|Integrated a Music Settings allowing players to adjust the volume or toggle the music.|
+|I enjoy visually appealing games.|Designed with attractive Pokémon card images and engaging animations.|
+|I prefer games that are easy to navigate.|Simple and intuitive UI with accessible buttons and straightforward navigation.|
 
 `Company Goals`
 
 | Company Goals | How are they achieved? |
 | :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------- |
+|We aim to provide an entertaining gaming experience.|Developed an immersive Pokemon memory game that's fun and captivating for players.|
+|We want to attract a wide range of users.|Ensured cross-device compatibility and a universally appealing Pokémon theme.|
+|We aim to create a user-friendly game interface.|Implemented a clean and intuitive design with easy-to-use controls and instructions.|
+|We want to offer customizable user experiences.|Provided music control options to cater to different user preferences.|
+|We aim to maintain user engagement and retention.|Included various Pokémon characters and a scoring system to keep players engaged.|
+|We plan to expand our game with more features.|Future implementations like multiplayer mode and more card sets are planned to enhance the game.|
 
 #### Full Testing
 
@@ -371,6 +393,12 @@ After making changes to your local copy, you can commit and push them to GitHub:
 ### Bugs
 
 #### Known Bugs
+
+##### Multiple Card Click Issue
+
+If the user quickly clicks several cards, the first card doesn't flip back, disrupting the game flow. This allows more than two cards to be visible simultaneously, which is against the game's rules and reduces the challenge.
+
+A possible fix might be adding a delay or disabling clicks until the first two cards' animations finish.
 
 #### Solved Bugs
 
@@ -399,6 +427,16 @@ youtube.com, https://github.com/DavidTausend/tausendlin/blob/main/README.md?plai
 
 ### Acknowledgments
 
-- My Mentor,[Matt Bodden](https://github.com/MattBCoding): For his invaluable guidance, feedback, and support throughout the project.
+- My Mentor,[Matt Bodden](https://github.com/MattBCoding): Immense gratitude for his invaluable guidance, insightful feedback, and continuous support throughout the project.
+
+- Code Institute Tutors and Staff: Thanks for their expertise and assistance, offering crucial support and resources for the project's development.
+
+- Online Coding Communities: Appreciation for the knowledge and solutions shared on platforms like Stack Overflow and GitHub, aiding in problem-solving.
+
+- Graphic and Audio Resource Contributors: Recognition for their artistic talents that added engaging dimensions to the game.
+
+- Open Source Contributors: Acknowledgment of their shared resources and code snippets that enhanced the game's features.
+
+- Personal Learning and Development: Acknowledgment of the growth and learning achieved, thanking all who contributed to this journey.
 
 [Back to Top ^](#introduction)
