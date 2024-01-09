@@ -106,7 +106,7 @@ The game's color scheme is dynamic and engaging, drawing from the colorful Pokem
 - Text Color: White (#FFFFFF) for readability against the dark background.
 - Button Color: Dark red (#D32F2F) with white text, highlighting interactivity.
 - Card Background: Neutral, emphasizing the colorful Pokemon images.
-- Modal Background: Black (#000000), ensuring focus on content.
+- Modal Background: Gray black (#333), ensuring focus on content.
 - Interactive Elements: Include hover effects and animations for engagement.
 
 ### Components
@@ -124,6 +124,8 @@ The game incorporates various UI components, each contributing to an engaging us
 5. Responsive Design: Media queries for adaptability across devices.
 
 6. Interactive Buttons: For various game actions, styled to match the game theme.
+
+7. Score List: Displays the top 5 high scores to motivate players to beat their previous records, dynamically updating to reflect ongoing performance.
 
 ### Imagery
 
@@ -202,13 +204,13 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 [Balsamiq](https://balsamiq.com): Utilized in the initial design phase, Balsamiq helped in creating wireframes, aiding in the visual and structural planning of the website.
 
-https://cloudconvert.com/ico-to-png
+[Python Tutor](https://pythontutor.com/javascript.html#mode=edit): 
 
-https://pythontutor.com/javascript.html#mode=edit
+[JS Code quality tool](https://jshint.com/):
 
-JS Code quality tool: https://jshint.com/
+[Web Vitals](https://web.dev/articles/vitals?hl=de):
 
-Web Vitals
+[Contrast Checker](https://webaim.org/resources/contrastchecker/):
 
 ## Deployment & Local Development
 

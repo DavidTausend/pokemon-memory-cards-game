@@ -214,8 +214,8 @@ function cardClickHandler() {
                 setTimeout(() => {
                     clickedCard.classList.remove("shake");
                     firstCardElement.classList.remove("shake");
-                }, 800);
-            }, 800);
+                }, 750);
+            }, 750);
         }
 
         counter = 0;
