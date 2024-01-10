@@ -109,9 +109,7 @@ The Pokémon Memory Card Game, with its user-centered design, offers a simple, f
 - Aim to keep users engaged and encourage repeated plays.
 - Leverage Pokemon themes to appeal to a broad audience and enhance brand recognition.
 - Ensure the game is accessible to users of varying abilities.
-- Use user feedback for game enhancement.
 - Ensure seamless performance across various devices.
-- Utilize the game for brand promotion and marketing.
 
 ## Design
 
@@ -160,6 +158,12 @@ Music plays a significant role in enhancing the gameplay experience. A backgroun
 
 ### Score
 
+The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
+
+- Points increase by 100 for correct matches, rewarding memory and accuracy.
+- Incorrect matches deduct 100 points, adding challenge.
+- The timer influences the final score, encouraging speed.
+- High scores are recorded for personal best tracking.
 
 ### Reset Game
 
@@ -420,6 +424,8 @@ A possible fix might be adding a delay or disabling clicks until the first two c
 ## Credits
 
 ### Content
+
+The content and design for the Pokémon Memory Card Game were developed by the creator, drawing inspiration from official Pokémon resources and classic memory card games. Game instructions, user interface text, and the unique scoring system were all originally created, while audio elements were selected to enhance the game's ambiance, with credit to their respective sources.
 
 #### External Articles and Guides
 

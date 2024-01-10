@@ -311,7 +311,15 @@ label[for="musicSlider"] {
 }
 
 /* Media query: larger devices (992px and up) */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    .window-content {
+        width: 90%;
+    }
+}
 
 /* Media query: larger screen devices (1200px and up) */
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+    .window-content {
+        width: 100%;
+    }
+}
