@@ -201,8 +201,8 @@ function cardClickHandler() {
             firstCardElement.classList.add("checked");
 
             matchedCards++;
-            checkForWin();
             incrementScore();
+            checkForWin();
         } else {
             // No match, shake and hide card
             setTimeout(() => {
