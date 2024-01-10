@@ -114,6 +114,11 @@ img {
     cursor: pointer;
 }
 
+#instructions ul {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
 .time-score-container {
     display: flex;
     align-items: center;
@@ -123,7 +128,7 @@ img {
     box-sizing: border-box;
 }
 
-timer,
+.timer,
 .scores,
 label,
 #sliderValue {
@@ -267,6 +272,10 @@ label[for="musicSlider"] {
 
     header {
         padding: 1rem 0.5rem;
+    }
+
+    #instructions ul {
+        font-size: 1rem;
     }
 
     .cards {
