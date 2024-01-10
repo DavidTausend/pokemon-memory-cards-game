@@ -167,7 +167,7 @@ label[for="musicSlider"] {
 /* Pokemon card image */
 .card img {
     height: 165px;
-    max-width: 100%;
+    width: 120px;
     border-radius: 10px;
     opacity: 0;
     transition: 0.3s all ease;
@@ -222,7 +222,7 @@ label[for="musicSlider"] {
     margin-bottom: 1rem;
 }
 
-/* not working */
+/* not working: https://inclusive-components.design/cards/ */
 .card:focus {
     outline: 2px solid #FFD700;
     background-color: #D32F2F;
@@ -254,7 +254,6 @@ label[for="musicSlider"] {
     background-color: #D32F2F;
     color: #ffffff;
     margin-bottom: 1rem;
-    width: 40%;
 }
 
 /* Media query for extra small devices (phones, less than 768px) */
@@ -312,14 +311,10 @@ label[for="musicSlider"] {
 
 /* Media query: larger devices (992px and up) */
 @media screen and (min-width: 992px) {
-    .window-content {
-        width: 90%;
-    }
+    
 }
 
 /* Media query: larger screen devices (1200px and up) */
 @media screen and (min-width: 1200px) {
-    .window-content {
-        width: 100%;
-    }
+
 }

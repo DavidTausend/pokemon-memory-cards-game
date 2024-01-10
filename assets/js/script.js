@@ -341,6 +341,11 @@ function selectCard() {
 // Score list
 function saveScore(name, score) {
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+    if (!name) {
+        name = "Anonymous";
+    }
+    
     highScores.push({ name: name, score: score });
     highScores.sort((a, b) => b.score - a.score);
     // Top 5 scores
