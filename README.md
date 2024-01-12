@@ -219,6 +219,10 @@ Incorporating the [PokeAPI](https://pokeapi.co/) to expand the card collection, 
 
 Implementing a rewards system for achieving certain milestones in the game.
 
+#### Database
+
+Future updates for the Pokemon Memory Card Game will include integrating a database to save and compare player scores, enabling leaderboard features for enhanced competition and engagement.
+
 ## Technologies
 
 ### Programming Languages

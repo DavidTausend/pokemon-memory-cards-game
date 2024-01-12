@@ -1,4 +1,3 @@
-/* https://www.w3schools.com/w3css/w3css_modal.asp */
 // Music Settings
 function musicSettings() {
 
@@ -157,8 +156,12 @@ let firstCard = null;
 let secondCard = null;
 let firstCardElement = null;
 counter = 0;
+// Control when the card is clicked
+let canClick = true; 
+
 
 function cardClickHandler() {
+    if (!canClick) return; 
     let clickedCard = this;
 
     if (firstClick) {
@@ -182,7 +185,10 @@ function cardClickHandler() {
             matchedCards++;
             incrementScore();
             checkForWin();
+            counter = 0; 
         } else {
+            // Disable further cards
+            canClick = false; 
             // No match, shake and hide card
             setTimeout(() => {
                 clickedCard.classList.remove("clicked");
@@ -193,11 +199,12 @@ function cardClickHandler() {
                 setTimeout(() => {
                     clickedCard.classList.remove("shake");
                     firstCardElement.classList.remove("shake");
-                }, 750);
-            }, 750);
-        }
 
-        counter = 0;
+                    counter = 0;
+                    canClick = true;
+                }, 800);
+            }, 800);
+        }
     }
 }
 
