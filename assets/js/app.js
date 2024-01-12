@@ -164,6 +164,9 @@ function cardClickHandler() {
     if (!canClick) return; 
     let clickedCard = this;
 
+    // Prevent clicking the same card twice
+    if (clickedCard === firstCardElement) return;
+
     if (firstClick) {
         startTimer();
         firstClick = false;
