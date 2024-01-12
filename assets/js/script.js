@@ -400,3 +400,19 @@ if (closeWindow) {
     closeWindow.onclick = closeWinnerWindow;
 }
 // End of reset game
+
+// Confirmation Modal
+function showConfirmation() {
+    // Show the confirmation section
+    document.getElementById("confirmationSection").style.display = "block";
+}
+
+function confirmAction() {
+    document.getElementById("confirmationSection").style.display = "none";
+    window.location.href = 'index.html';
+}
+
+function cancelAction() {
+    document.getElementById("confirmationSection").style.display = "none";
+    window.location.href = 'game.html';
+}

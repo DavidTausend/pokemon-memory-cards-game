@@ -77,7 +77,17 @@
             <div id="button-container">
                 <button onclick="restart()">Restart</button>
                 <button onclick="toggleMusic()">Play/Pause Music</button>
-                <button onclick="location.href='index.html'">Quit Game</button>
+                <button onclick="showConfirmation()">Quit Game</button>
+            </div>
+        </div>
+        <!-- Quit Confirmation Window -->
+        <div id="confirmationSection" class="window" style="display: none;">
+            <div class="window-content">
+                <p>Are you sure you want to proceed?</p>
+                <div class="play-again-button">
+                    <button onclick="confirmAction()">Confirm</button>
+                    <button onclick="cancelAction()">Cancel</button>
+                </div>
             </div>
         </div>
         <!-- Winner Window -->
