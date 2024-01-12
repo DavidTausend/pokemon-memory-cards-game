@@ -105,13 +105,13 @@ img {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #333;
+.close-window:hover,
+.close-window:focus  {
+    color: #D32F2F;
     text-decoration: none;
-    cursor: pointer;
 }
 
 #instructions ul {
