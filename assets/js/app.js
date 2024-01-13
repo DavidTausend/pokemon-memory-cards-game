@@ -19,8 +19,8 @@ function musicSettings() {
 
 // Play music game
 let audio = new Audio("../assets/audio/music.mp3");
-// Default volume 50%
-audio.volume = 0.5;
+// Default volume 0%
+audio.volume = 0.0;
 
 function toggleMusic() {
     if (audio.paused) {
