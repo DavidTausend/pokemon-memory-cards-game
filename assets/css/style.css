@@ -229,7 +229,7 @@ label[for="musicSlider"] {
 
 /* not working: https://inclusive-components.design/cards/ */
 .card:focus {
-    outline: 2px solid #FFD700;
+    outline: 2px solid #D32F2F;
     background-color: #D32F2F;
     border: 3px solid;
     transform: scale(1.1);

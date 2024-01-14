@@ -99,7 +99,9 @@ function attachCardEventListeners() {
     const cards = document.getElementsByClassName("card");
     cardsArray = Array.from(cards);
 
-    cardsArray.forEach((card) => {
+     // Set tabindex for the first card to '0' and others to '-1'
+     cardsArray.forEach((card, index) => {
+        card.setAttribute('tabindex', index === 0 ? '0' : '-1');
         card.addEventListener("click", cardClickHandler);
     });
     // Focus index to 0
@@ -302,29 +304,47 @@ document.addEventListener('keydown', function(event) {
 
 function moveFocus(direction) {
     const cards = Array.from(document.getElementsByClassName("card"));
-    const gridSize = Math.ceil(Math.sqrt(cards.length)); // Adjust for non-square grids
+    // Adjust gridSize based on screen width
+    // 6 for larger screens, 3 for smaller screens
+    const gridSize = window.innerWidth >= 768 ? 6 : 3; 
 
     let row = Math.floor(currentFocusIndex / gridSize);
     let col = currentFocusIndex % gridSize;
 
-    switch(direction) {
+    switch (direction) {
         case 'up': row = Math.max(0, row - 1); break;
         case 'down': row = Math.min(gridSize - 1, row + 1); break;
         case 'left': col = Math.max(0, col - 1); break;
         case 'right': col = Math.min(gridSize - 1, col + 1); break;
     }
 
-    // Calculate new index and ensure it's within the bounds of the array
     let newIndex = row * gridSize + col;
-    currentFocusIndex = Math.min(Math.max(0, newIndex), cards.length - 1);
+    newIndex = Math.min(Math.max(0, newIndex), cards.length - 1);
 
-    cards[currentFocusIndex].focus();
+    // Update tabindex
+    cards[currentFocusIndex].setAttribute('tabindex', '-1');
+    cards[newIndex].setAttribute('tabindex', '0');
+    cards[newIndex].focus();
+
+    currentFocusIndex = newIndex;
 }
 
 function selectCard() {
     const cards = Array.from(document.getElementsByClassName("card"));
-    cards[currentFocusIndex].click();
+    // Check if the currently focused card can be clicked
+    if (cards[currentFocusIndex].getAttribute('tabindex') === '0') {
+        cards[currentFocusIndex].click();
+    }
 }
+
+window.addEventListener('resize', function() {
+    // Reset focus to the first card when window is resized
+    const cards = Array.from(document.getElementsByClassName("card"));
+    cards.forEach(card => card.setAttribute('tabindex', '-1'));
+    currentFocusIndex = 0;
+    cards[currentFocusIndex].setAttribute('tabindex', '0');
+    cards[currentFocusIndex].focus();
+});
 // End of Keyboard feature
 
 // Score list
