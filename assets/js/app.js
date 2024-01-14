@@ -284,12 +284,6 @@ function checkForWin() {
 // Keyboard feature
 document.addEventListener('keydown', function(event) {
     switch(event.key) {
-        case 'ArrowUp':
-            moveFocus('up');
-            break;
-        case 'ArrowDown':
-            moveFocus('down');
-            break;
         case 'ArrowLeft':
             moveFocus('left');
             break;
@@ -305,21 +299,39 @@ document.addEventListener('keydown', function(event) {
 function moveFocus(direction) {
     const cards = Array.from(document.getElementsByClassName("card"));
     // Adjust gridSize based on screen width
-    // 6 for larger screens, 3 for smaller screens
-    const gridSize = window.innerWidth >= 768 ? 6 : 3; 
+    // 6 columns for larger screens, 3 columns for smaller screens
+    const numCols = window.innerWidth >= 768 ? 3 : 6;
 
-    let row = Math.floor(currentFocusIndex / gridSize);
-    let col = currentFocusIndex % gridSize;
+    let currentRow = Math.floor(currentFocusIndex / numCols);
+    let currentCol = currentFocusIndex % numCols;
 
     switch (direction) {
-        case 'up': row = Math.max(0, row - 1); break;
-        case 'down': row = Math.min(gridSize - 1, row + 1); break;
-        case 'left': col = Math.max(0, col - 1); break;
-        case 'right': col = Math.min(gridSize - 1, col + 1); break;
+        case 'left':
+            if (currentCol > 0) {
+                currentCol--;
+            } else if (currentRow > 0) {
+                currentRow--;
+                currentCol = numCols - 1;
+            } else {
+                currentRow = Math.floor((cards.length - 1) / numCols);
+                currentCol = (cards.length - 1) % numCols;
+            }
+            break;
+        case 'right':
+            if (currentCol < numCols - 1 && currentFocusIndex < cards.length - 1) {
+                currentCol++;
+            } else if (currentRow < Math.floor((cards.length - 1) / numCols)) {
+                currentRow++;
+                currentCol = 0;
+            } else {
+                currentRow = 0;
+                currentCol = 0;
+            }
+            break;
     }
 
-    let newIndex = row * gridSize + col;
-    newIndex = Math.min(Math.max(0, newIndex), cards.length - 1);
+    let newIndex = currentRow * numCols + currentCol;
+    newIndex = Math.min(newIndex, cards.length - 1);
 
     // Update tabindex
     cards[currentFocusIndex].setAttribute('tabindex', '-1');
