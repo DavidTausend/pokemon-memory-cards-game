@@ -22,6 +22,13 @@ Array.from(document.getElementsByClassName('close-window')).forEach(button => {
 });
 
 function submitName() {
-    let playerName = document.getElementById("playerNameInput");
-
+    let playerNameInput = document.getElementById("playerNameInput");
+    let playerName = playerNameInput.value;
+    
+    if (playerName.trim() === '') {
+        alert('Please enter your name.');
+        return;
+    }
+    localStorage.setItem("playerName", playerName);
+    window.location.href = 'game.html';
 }
