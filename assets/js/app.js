@@ -268,7 +268,7 @@ function winnerMessage() {
             winnerWindow.style.display = "none";
         }
     };
-    let playerName = prompt("Enter your name:");
+    let playerName = localStorage.getItem("playerName") || 'Player';
     saveScore(playerName, currentScore);
     displayHighScores();
 }
