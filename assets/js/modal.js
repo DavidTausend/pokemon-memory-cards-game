@@ -6,7 +6,7 @@ function toggleModal(windowId, show) {
 
 // Closing modals when clicking outside
 Array.from(document.getElementsByClassName('window')).forEach(modal => {
-    modal.addEventListener('click', function(event) {
+    modal.addEventListener('click', function (event) {
         if (event.target === modal) {
             toggleModal(modal.id, false);
         }
@@ -15,7 +15,7 @@ Array.from(document.getElementsByClassName('window')).forEach(modal => {
 
 // Close Windows
 Array.from(document.getElementsByClassName('close-window')).forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         let modal = this.closest('.window');
         toggleModal(modal.id, false);
     });
@@ -24,9 +24,18 @@ Array.from(document.getElementsByClassName('close-window')).forEach(button => {
 function submitName() {
     let playerNameInput = document.getElementById("playerNameInput");
     let playerName = playerNameInput.value;
-    
-    if (playerName.trim() === '') {
+
+    // Regular expression to allow only letters and spaces
+    let nameRegex = /^[A-Za-z\s]+$/;
+
+    if (playerName === '') {
         alert('Please enter your name.');
+        return;
+    }
+
+    // Regular expression matches the player name
+    if (!nameRegex.test(playerName)) {
+        alert('Your name must contain only letters and spaces.');
         return;
     }
     localStorage.setItem("playerName", playerName);

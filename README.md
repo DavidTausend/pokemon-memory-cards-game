@@ -152,6 +152,17 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ## Features
 
+### Regular Expression
+
+The regular expression `^[A-Za-z\s]+$` is used in the game for validating player names. This pattern ensures that only alphabetic characters and spaces are allowed, preventing entries with numbers or special characters. If the entered name doesn't match the pattern, the user is alerted, and the input isn't accepted. This feature maintains data consistency and enhances user experience by ensuring proper name formats.
+
+- The regular expression `^[A-Za-z\s]+$` is used. This means:
+  - `^` asserts the start of a line.
+  - `[A-Za-z]` allows uppercase and lowercase letters.
+  - `\s` allows spaces.
+  - `+` indicates one or more of the preceding elements.
+  - `$` asserts the end of a line.
+
 ### Music
 
 Music plays a significant role in enhancing the gameplay experience. A background track adds to the game's ambiance, creating an engaging atmosphere. Players have control over the music with features to play, pause, and adjust the volume. This functionality not only personalizes the experience but also makes the game more accessible and enjoyable for all users, regardless of their audio preferences.
@@ -273,7 +284,9 @@ Future updates for the Pokemon Memory Card Game will include integrating a datab
 
 [Contrast Checker](https://webaim.org/resources/contrastchecker/): Ensured text and background combinations met accessibility standards.
 
-[esprima](https://esprima.org/demo/validate.html): 
+[Esprima](https://esprima.org/demo/validate.html): This JavaScript validator was vital for syntax parsing, ensuring code correctness and debugging assistance.
+
+[Regular Expression](https://regexr.com/): Used to test and refine regular expressions, crucial for validating user inputs and enhancing data integrity.
 
 ## Deployment & Local Development
 
