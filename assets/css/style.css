@@ -60,6 +60,7 @@ img {
 .actions {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 /* Buttons class */
