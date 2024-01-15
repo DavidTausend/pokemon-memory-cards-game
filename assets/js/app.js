@@ -36,9 +36,11 @@ function toggleMusic() {
 function sliderChange(value) {
     let volume = value / 100;
     // Set the volume to the audio
-    audio.volume = volume; // Set the volume of the audio
+    audio.volume = volume;
+     // Save the volume in local storage
+     localStorage.setItem("musicVolume", volume);
     // Update the display value
-    document.getElementById("sliderValue").textContent = value; // Update the display value
+    document.getElementById("sliderValue").textContent = value;
 }
 // End of Music Settings
 
@@ -397,6 +399,15 @@ function onGameEnd() {
 window.onload = function() {
     selectAndDisplayCards();
     displayHighScores();
+
+    // Retrieve the saved volume from local storage
+    let savedVolume = localStorage.getItem("musicVolume");
+    if (savedVolume !== null) {
+        let volumePercentage = savedVolume * 100;
+        document.getElementById("musicSlider").value = volumePercentage;
+        audio.volume = savedVolume;
+        document.getElementById("sliderValue").textContent = volumePercentage;
+    }
 };
 
 // Reset game
