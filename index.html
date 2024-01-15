@@ -39,9 +39,19 @@
     </header>
     <main>
         <div class="actions">
-            <button onclick="location.href='game.html'">Start Game</button>
+            <button onclick="showName()">Start Game</button>
             <button onclick="showInstructions()">Instructions</button>
             <button onclick="showRules()">Rules</button>
+        </div>
+
+        <!-- Name Modal -->
+        <div id="nameModal" class="window">
+            <div class="window-content">
+                <span class="close-window">&times;</span>
+                <h2>Please Enter Your Name</h2>
+                <input type="text" id="playerNameInput" placeholder="Players Name">
+                <button onclick="submitName()">Submit</button>
+            </div>
         </div>
 
         <!-- Instructions Window -->
@@ -54,12 +64,16 @@
                     <ul>
                         <li><strong>Start the Game:</strong> Click on the "Start Game" button to begin.</li>
                         <li><strong>Flip Cards:</strong> Click on a card to flip it and reveal the Pokemon.</li>
-                        <li><strong>Find a Match:</strong> Try to find the matching Pokemon card. Only two cards can be flipped at a time.</li>
+                        <li><strong>Find a Match:</strong> Try to find the matching Pokemon card. Only two cards can be
+                            flipped at a time.</li>
                         <li><strong>Remember:</strong> Memorize the Pokemon positions to match pairs quicker.</li>
-                        <li><strong>Scoring:</strong> Each correct match scores points. A mismatch will decrease your score and add more time to the timer.</li>
+                        <li><strong>Scoring:</strong> Each correct match scores points. A mismatch will decrease your
+                            score and add more time to the timer.</li>
                         <li><strong>Win the Game:</strong> Match all pairs before the timer runs out.</li>
-                        <li><strong>Restart:</strong> You can restart the game anytime by clicking the "Restart" button.</li>
-                        <li><strong>Music Control:</strong> Adjust the background music volume using music slider or pause it by clicking the "Play/Pause Music" button.</li>
+                        <li><strong>Restart:</strong> You can restart the game anytime by clicking the "Restart" button.
+                        </li>
+                        <li><strong>Music Control:</strong> Adjust the background music volume using music slider or
+                            pause it by clicking the "Play/Pause Music" button.</li>
                     </ul>
                     <br>
                     Good luck, and have fun!

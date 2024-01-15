@@ -39,3 +39,29 @@ function showRules() {
         }
     }
 }
+
+function showName() {
+
+    let nameWindow = document.getElementById("nameModal");
+    let span = document.getElementsByClassName("close-window")[0];
+
+    // Open the instructions window (model)
+    nameWindow.style.display = "block";
+
+    // Close instructions window (model) when the user clicks on (x)
+    span.onclick = function () {
+        nameWindow.style.display = "none";
+    }
+
+    // Close the instructions window (model) when the user clicks anywhere outside of the window
+    nameWindow.onclick = function (event) {
+        if (event.target == nameWindow) {
+            nameWindow.style.display = "none";
+        }
+    }
+}
+
+function submitName() {
+    let playerName = document.getElementById("playerNameInput");
+
+}
