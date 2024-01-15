@@ -1,4 +1,7 @@
-// Music Settings
+// https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
+//import { submitName } from './module.js';
+
+// Music Setting
 function musicSettings() {
 
     let musicSettingsWindow = document.getElementById("music");
