@@ -57,11 +57,17 @@ img {
     height: auto;
 }
 
-.actions {
+.button-column {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
+
+.actions {
+    padding: 0.7rem 3rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
 
 /* Buttons class */
 .actions button {
@@ -109,7 +115,7 @@ img {
 }
 
 .close-window:hover,
-.close-window:focus  {
+.close-window:focus {
     color: #D32F2F;
     text-decoration: none;
 }
@@ -285,6 +291,12 @@ label[for="musicSlider"] {
         padding: 1rem 0.5rem;
     }
 
+    .actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     #instructions ul {
         font-size: 1rem;
     }
@@ -317,7 +329,7 @@ label[for="musicSlider"] {
 
     h1,
     h2,
-    p, 
+    p,
     label {
         font-size: 1.5rem;
     }
@@ -337,14 +349,14 @@ label[for="musicSlider"] {
 
     h1,
     h2,
-    p, 
+    p,
     label {
         font-size: 1.8rem;
     }
 
-    .actions button, 
-    #nameModal button, 
-    #button-container button, 
+    .actions button,
+    #nameModal button,
+    #button-container button,
     .play-again-button button {
         padding: 0.8rem 3.5rem;
         font-size: larger;
@@ -361,7 +373,7 @@ label[for="musicSlider"] {
     input[type="range"] {
         width: 120px;
     }
-    
+
     label[for="musicSlider"] {
         font-size: 1.8rem;
     }
@@ -372,21 +384,21 @@ label[for="musicSlider"] {
 
     h1,
     h2,
-    p, 
+    p,
     label {
         font-size: 2rem;
     }
 
-    .actions button, 
-    #nameModal button, 
-    #button-container button, 
+    .actions button,
+    #nameModal button,
+    #button-container button,
     .play-again-button button {
         margin-top: 0.5rem;
         font-size: x-large;
     }
 
     .window-content {
-        width: 65%; 
+        width: 65%;
     }
 
     .cards {
