@@ -21,9 +21,9 @@ function musicSettings() {
 }
 
 // Play music game
-let audio = new Audio("../assets/audio/music.mp3");
+let audio = document.getElementById("audio");
 // Default volume 0%
-audio.volume = 0.0;
+audio.volume = 0;
 
 function toggleMusic() {
     if (audio.paused) {
