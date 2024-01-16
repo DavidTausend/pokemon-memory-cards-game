@@ -446,20 +446,23 @@ The content and design for the Pokémon Memory Card Game were developed by the c
 
 #### External Articles and Guides
 
-youtube.com
+- YouTube: For tutorial videos on web development and similar projects.
 
 #### Community Contributions and Forums
 
-forum.freecodecamp.org
-https://stackoverflow.com/
+- FreeCodeCamp Forum: A community platform for coding challenges and solutions.
+- StackOverflow: Essential for solving coding issues and learning best practices.
 
 #### Design and Spacing Techniques
 
-css-tricks.com, youtube.com, w3schools.com
+- CSS-Tricks: Articles on CSS, with a focus on design and spacing.
+- W3Schools: Tutorials for HTML, CSS and JS layout techniques.
+- Github: I used my mentor's project as a guide for structuring and organizing my code effectively.
 
 ### Software Design Documentation
 
-youtube.com, https://github.com/DavidTausend/tausendlin/blob/main/README.md?plain=1
+- YouTube: Educational content on software design principles.
+- GitHub Project README: Detailed project documentation and design process.
 
 ### Media
 
