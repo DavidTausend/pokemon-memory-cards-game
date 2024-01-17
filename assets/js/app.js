@@ -37,8 +37,8 @@ function sliderChange(value) {
     let volume = value / 100;
     // Set the volume to the audio
     audio.volume = volume;
-     // Save the volume in local storage
-     localStorage.setItem("musicVolume", volume);
+    // Save the volume in local storage
+    localStorage.setItem("musicVolume", volume);
     // Update the display value
     document.getElementById("sliderValue").textContent = value;
 }
@@ -104,8 +104,8 @@ function attachCardEventListeners() {
     const cards = document.getElementsByClassName("card");
     cardsArray = Array.from(cards);
 
-     // Set tabindex for the first card to '0' and others to '-1'
-     cardsArray.forEach((card, index) => {
+    // Set tabindex for the first card to '0' and others to '-1'
+    cardsArray.forEach((card, index) => {
         card.setAttribute('tabindex', index === 0 ? '0' : '-1');
         card.addEventListener("click", cardClickHandler);
     });
@@ -164,11 +164,11 @@ let secondCard = null;
 let firstCardElement = null;
 counter = 0;
 // Control when the card is clicked
-let canClick = true; 
+let canClick = true;
 
 
 function cardClickHandler() {
-    if (!canClick) return; 
+    if (!canClick) return;
     let clickedCard = this;
 
     // Prevent clicking the same card twice
@@ -195,10 +195,10 @@ function cardClickHandler() {
             matchedCards++;
             incrementScore();
             checkForWin();
-            counter = 0; 
+            counter = 0;
         } else {
             // Disable further cards
-            canClick = false; 
+            canClick = false;
             // No match, shake and hide card
             setTimeout(() => {
                 clickedCard.classList.remove("clicked");
@@ -257,7 +257,7 @@ function addTimeToTimer(secondsToAdd) {
 function winnerMessage() {
 
     let winnerWindow = document.getElementById("winner");
-    let span = winnerWindow.querySelector(".close-window"); 
+    let span = winnerWindow.querySelector(".close-window");
 
     winnerWindow.style.display = "block";
 
@@ -287,8 +287,8 @@ function checkForWin() {
 // End of win user
 
 // Keyboard feature
-document.addEventListener('keydown', function(event) {
-    switch(event.key) {
+document.addEventListener('keydown', function (event) {
+    switch (event.key) {
         case 'ArrowLeft':
             moveFocus('left');
             break;
@@ -354,7 +354,7 @@ function selectCard() {
     }
 }
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     // Reset focus to the first card when window is resized
     const cards = Array.from(document.getElementsByClassName("card"));
     cards.forEach(card => card.setAttribute('tabindex', '-1'));
@@ -371,20 +371,23 @@ function saveScore(name, score) {
     if (!name) {
         name = "Anonymous";
     }
-    
-    highScores.push({ name: name, score: score });
+
+    highScores.push({
+        name: name,
+        score: score
+    });
     highScores.sort((a, b) => b.score - a.score);
     // Top 5 scores
     highScores = highScores.slice(0, 5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-} 
+}
 
 // Display high scores
 function displayHighScores() {
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     const highScoreList = document.getElementById('highScoreList');
-    
+
     highScoreList.innerHTML = highScores.map(score => `<li>${score.name} - ${score.score}</li>`).join('');
 }
 
@@ -396,7 +399,7 @@ function onGameEnd() {
     displayHighScores();
 }
 
-window.onload = function() {
+window.onload = function () {
     selectAndDisplayCards();
     displayHighScores();
 
