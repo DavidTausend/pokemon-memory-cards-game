@@ -152,7 +152,10 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ## Features
 
-### Regular Expression
+### Player's Name
+
+
+#### Regular Expression
 
 The regular expression `^[A-Za-z\s]+$` is used in the game for validating player names. This pattern ensures that only alphabetic characters and spaces are allowed, preventing entries with numbers or special characters. If the entered name doesn't match the pattern, the user is alerted, and the input isn't accepted. This feature maintains data consistency and enhances user experience by ensuring proper name formats.
 
@@ -176,6 +179,9 @@ The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 - The timer influences the final score, encouraging speed.
 - High scores are recorded for personal best tracking.
 
+#### High Score
+
+
 ### Reset Game
 
 The Reset Game feature in the Pokemon Memory Card Game enables players to restart their game, resetting the score, reshuffling cards, and resetting the timer, ensuring a fresh gameplay experience each time.
@@ -190,6 +196,11 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 ### Keyboard
 
+
+### Quit Game
+
+
+#### Confirm Quit Game
 
 
 ### Future Implementations
@@ -425,6 +436,87 @@ Lighthouse was employed to evaluate the website's performance, accessibility, be
 - Samsung Internet
 
 <br>
+
+`Player's Name`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Music`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Score`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`High Score`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Reset Game`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Timer`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Schuffle cards`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Quit Game`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+
+`Confirm Quit Game`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |
 
 ### Bugs
 
