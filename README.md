@@ -150,17 +150,24 @@ The Pokemon Memory Card Game uses themed imagery, like hidden Pokemon in the hea
 
 Wireframes for the Pokemon Memory Card Game detail the layout and user interaction. They include the game area, action buttons, and modals for instructions and music, guiding the development of a cohesive, user-friendly interface.
 
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop1.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop2.png"></div>
+#### Main Menu 
 
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad1.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad2.png"></div>
+![Main Menu Desktop](/assets/images/readme/wireframes/desktop_menu.webp)
+![Main Menu iPad](/assets/images/readme/wireframes/ipad_menu.webp)
+![Main Menu iPhone](/assets/images/readme/wireframes/iphone_menu.webp)
 
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone1.png"></div>
-<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone2.png"></div>
+#### Game Screen
+
+![Game Screen Desktop](/assets/images/readme/wireframes/desktop_game.webp)
+![Game Screen iPad](/assets/images/readme/wireframes/ipad_game.webp)
+![Game Screen iPhone](/assets/images/readme/wireframes/iphone_game.webp)
+
+#### End of Game Screen
+
+![End of Game Screen Wireframe](/assets/images/readme/wireframes/desktop_end.webp)
+![End of Game Screen Wireframe](/assets/images/readme/wireframes/ipad_end.webp)
+![End of Game Screen Wireframe](/assets/images/readme/wireframes/iphone_end.webp)
+
 
 ## Features
 
@@ -402,6 +409,9 @@ Lighthouse was employed to evaluate the website's performance, accessibility, be
 <div align="center"><img src="assets/images/readme/testing/lighthouse_mobile_final.webp"></div>
 
 ##### Accessibility
+
+
+<div align="center"><img src="assets/images/readme/testing/wave.webp"></div>
 
 ### Manual testing
 
