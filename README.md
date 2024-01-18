@@ -173,6 +173,7 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ### Player's Name
 
+The player is able to give the name in the Pokemon Memory Card Game, a regular expression validates player names to only include alphabetic characters and spaces. This ensures consistent and proper name formatting, enhancing user experience.
 
 #### Regular Expression
 
@@ -215,12 +216,15 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 ### Keyboard
 
+The game integrates keyboard navigation, enabling players to interact with the game using keyboard inputs. This feature enhances accessibility, allowing users who prefer or require keyboard navigation to fully engage with the game.
 
 ### Quit Game
 
+A "Quit Game" feature is available, providing players with an option to exit the game session. This feature is particularly useful for users who wish to end their current game and return to the main menu or close the application.
 
 #### Confirm Quit Game
 
+Upon selecting "Quit Game," a confirmation prompt is displayed, ensuring that players don't accidentally exit their game. This additional step helps prevent unintended game closures, offering a user-friendly experience by safeguarding players' game progress.
 
 ### Future Implementations
 
@@ -410,6 +414,7 @@ Lighthouse was employed to evaluate the website's performance, accessibility, be
 
 ##### Accessibility
 
+Accessibility testing was conducted using WAVE and Lighthouse tools, ensuring the website is user-friendly for a diverse audience. Regular assessments are planned for ongoing accessibility improvements.
 
 <div align="center"><img src="assets/images/readme/testing/wave.webp"></div>
 
@@ -463,10 +468,9 @@ Lighthouse was employed to evaluate the website's performance, accessibility, be
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Name Input Validation|The game should accept only alphabetic characters and spaces in the name field.|Tested name submission with various inputs including numbers and special characters.|The game correctly accepted names with letters and spaces, and alerted when invalid characters were used.|Pass ✅|
+|Responsiveness of Name Input|The name input field should be easily accessible and functional on all devices.|Tested the responsiveness and functionality of the name input on different devices and browsers.|Name input was responsive and worked as expected on all tested devices and browsers.|Pass ✅|
+|Interaction with Game Progress|Entering a name should not affect the game's progress or performance.|Tested game play before and after entering a name to observe any changes in game performance.|Game performance remained consistent and unaffected by the name entry.|Pass ✅|
 
 `Music`
 
