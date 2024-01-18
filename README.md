@@ -150,6 +150,18 @@ The Pokemon Memory Card Game uses themed imagery, like hidden Pokemon in the hea
 
 Wireframes for the Pokemon Memory Card Game detail the layout and user interaction. They include the game area, action buttons, and modals for instructions and music, guiding the development of a cohesive, user-friendly interface.
 
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop1.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_desktop2.png"></div>
+
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad1.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_ipad2.png"></div>
+
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone1.png"></div>
+<div align="center"><img src="assets/images/readme/wireframes/wireframes_iphone2.png"></div>
+
 ## Features
 
 ### Player's Name
