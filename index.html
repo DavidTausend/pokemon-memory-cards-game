@@ -24,7 +24,8 @@
 
     <!-- Header -->
     <header>
-        <h1>Welcome to the Pokemon Memory Cards Game</h1>
+        <divc class="introduction">
+            <h1>Welcome to the Pokemon Memory Cards Game</h1>
         <p>Can you remember what's hiding there?</p>
         <img srcset="
               assets/images/pictures/hidden_pokemon_large.webp  1024w,
@@ -32,10 +33,13 @@
               assets/images/pictures/hidden_pokemon_small.webp    320w
             " sizes="(min-width: 35em) 65vw, 105vw" src="assets/images/pictures/hidden_pokemon_medium.webp"
             alt="Hidden pokemons">
+        </div>
     </header>
 
     <!-- Main -->
     <main>
+        
+        <!-- Start Game, Instructions, and Rules Buttons-->
         <div class="button-column">
             <div class="actions">
                 <button onclick="toggleModal('nameModal', true)">Start Game</button>
@@ -86,7 +90,101 @@
                 <span class="close-window">&times;</span>
             </div>
         </div>
+
+        <!-- Game Content -->
+        <div class="content-container">
+            <h1>Gotta catch 'em all!</h1>
+            <br>
+
+            <!-- Time Score -->
+            <div class="time-score-container">
+                <p class="timer">0:00</p>
+                <label for="musicSlider">Volume</label>
+                <input type="range" id="musicSlider" min="0" max="100" value="0" oninput="sliderChange(this.value)">
+                <p><span id="sliderValue">0</span></p>
+                <p class="scores">Score: <span id="score">0</span></p>
+            </div>
+
+            <!-- POkemon Cards -->
+            <div class="cards">
+                <div class="card" tabindex="0" data-pokemon="blastoise">
+                    <img src="assets/images/cards/blastoise.webp" loading="lazy" alt="blastoise pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="bulbasaur">
+                    <img src="assets/images/cards/bulbasaur.webp" loading="lazy" alt="bulbasaur pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="charmander">
+                    <img src="assets/images/cards/charmander.webp" loading="lazy" alt="charmander pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="cubone">
+                    <img src="assets/images/cards/cubone.webp" loading="lazy" alt="cubone pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="eevee">
+                    <img src="assets/images/cards/eevee.webp" loading="lazy" alt="eevee pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="flareon">
+                    <img src="assets/images/cards/flareon.webp" loading="lazy" alt="flareon pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="ivysaur">
+                    <img src="assets/images/cards/ivysaur.webp" loading="lazy" alt="ivysaur pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="newtwo">
+                    <img src="assets/images/cards/newtwo.webp" loading="lazy" alt="newtwo pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="persian">
+                    <img src="assets/images/cards/persian.webp" loading="lazy" alt="persian pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="pichu">
+                    <img src="assets/images/cards/pichu.webp" loading="lazy" alt="pichu pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="pikachu">
+                    <img src="assets/images/cards/pikachu.webp" loading="lazy" alt="pikachu pokemon">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="pokemons">
+                    <img src="assets/images/cards/pokemons.webp" loading="lazy" alt="pokemons">
+                </div>
+                <div class="card" tabindex="0" data-pokemon="raichu">
+                    <img src="assets/images/cards/raichu.webp" loading="lazy" alt="raichu pokemon">
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div id="button-container">
+                <button onclick="restart()">Restart</button>
+                <button onclick="toggleMusic()">Play/Pause Music</button>
+                <button onclick="showConfirmation()">Quit Game</button>
+            </div>
+        </div>
+
+        <!-- Quit Confirmation Window -->
+        <div id="confirmationSection" class="window" style="display: none;">
+            <div class="window-content">
+                <p>Are you sure you want to proceed?</p>
+                <div class="play-again-button">
+                    <button onclick="confirmAction()">Confirm</button>
+                    <button onclick="cancelAction()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- High Score Window -->
+        <div id="winner" class="window">
+            <div class="window-content">
+                <span class="close-window">&times;</span>
+                <h2>Congratulations! You won!</h2>
+                <div id="highScores" class="high-scores">
+                    <p>High Scores</p>
+                    <ul id="highScoreList"></ul>
+                </div>
+                <div class="play-again-button">
+                    <button onclick="restart()">Play Again</button>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Music -->
+    <audio id="audio" src="assets/audio/music.mp3"></audio>
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>

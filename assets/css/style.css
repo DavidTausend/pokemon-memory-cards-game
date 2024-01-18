@@ -131,6 +131,10 @@ img {
     font-size: large;
 }
 
+.content-container {
+    display: none;
+}
+
 #instructions ul {
     font-size: 1.5rem;
     text-align: justify;
