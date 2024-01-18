@@ -27,7 +27,6 @@ function submitName() {
 
     // Regular expression to allow only letters and spaces
     let nameRegex = /^[A-Za-z\s]+$/;
-
     if (playerName === '') {
         alert('Please enter your name.');
         return;

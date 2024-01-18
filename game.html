@@ -23,9 +23,11 @@
 <body>
     <!-- Main -->
     <main>
+
         <!-- Music -->
         <audio id="audio" src="assets/audio/music.mp3"></audio>
 
+        <!-- Time Score -->
         <div class="content-container">
             <h1>Gotta catch 'em all!</h1>
             <br>
@@ -36,6 +38,8 @@
                 <p><span id="sliderValue">0</span></p>
                 <p class="scores">Score: <span id="score">0</span></p>
             </div>
+
+            <!-- POkemon Cards -->
             <div class="cards">
                 <div class="card" tabindex="0" data-pokemon="blastoise">
                     <img src="assets/images/cards/blastoise.webp" loading="lazy" alt="blastoise pokemon">
@@ -77,12 +81,15 @@
                     <img src="assets/images/cards/raichu.webp" loading="lazy" alt="raichu pokemon">
                 </div>
             </div>
+
+            <!-- Buttons -->
             <div id="button-container">
                 <button onclick="restart()">Restart</button>
                 <button onclick="toggleMusic()">Play/Pause Music</button>
                 <button onclick="showConfirmation()">Quit Game</button>
             </div>
         </div>
+
         <!-- Quit Confirmation Window -->
         <div id="confirmationSection" class="window" style="display: none;">
             <div class="window-content">
@@ -93,7 +100,8 @@
                 </div>
             </div>
         </div>
-        <!-- Winner Window -->
+
+        <!-- High Score Window -->
         <div id="winner" class="window">
             <div class="window-content">
                 <span class="close-window">&times;</span>
@@ -108,6 +116,7 @@
             </div>
         </div>
     </main>
+    
     <!-- JavaScript -->
     <script src="assets/js/app.js"></script>
 </body>

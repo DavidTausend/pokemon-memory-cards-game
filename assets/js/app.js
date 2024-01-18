@@ -1,18 +1,11 @@
-// https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
-//import { submitName } from './module.js';
-
 // Music Setting
 function musicSettings() {
-
     let musicSettingsWindow = document.getElementById("music");
     let span = document.getElementsByClassName("close-window")[0];
-
     musicSettingsWindow.style.display = "block";
-
     span.onclick = function () {
         musicSettingsWindow.style.display = "none";
     };
-
     musicSettingsWindow.onclick = function (event) {
         if (event.target == musicSettingsWindow) {
             musicSettingsWindow.style.display = "none";
@@ -22,9 +15,9 @@ function musicSettings() {
 
 // Play music game
 let audio = document.getElementById("audio");
+
 // Default volume 0%
 audio.volume = 0;
-
 function toggleMusic() {
     if (audio.paused) {
         audio.play();
@@ -35,10 +28,13 @@ function toggleMusic() {
 
 function sliderChange(value) {
     let volume = value / 100;
+
     // Set the volume to the audio
     audio.volume = volume;
+
     // Save the volume in local storage
     localStorage.setItem("musicVolume", volume);
+
     // Update the display value
     document.getElementById("sliderValue").textContent = value;
 }
@@ -55,6 +51,7 @@ function shuffleArray(array) {
 
 // Select the pokemon cards and display them
 function selectAndDisplayCards() {
+
     // Pokemon List
     const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu"];
 
@@ -67,6 +64,7 @@ function selectAndDisplayCards() {
             selectedPokemon.push(pokemon);
         }
     }
+
     // Duplicate each Pokemon to make 16 cards
     selectedPokemon = selectedPokemon.concat(selectedPokemon);
 
@@ -109,6 +107,7 @@ function attachCardEventListeners() {
         card.setAttribute('tabindex', index === 0 ? '0' : '-1');
         card.addEventListener("click", cardClickHandler);
     });
+
     // Focus index to 0
     currentFocusIndex = 0;
 }
@@ -130,7 +129,6 @@ let firstClick = true;
 function startTimer() {
     // Just one time interval
     if (timer.interval) return;
-
     timer.interval = setInterval(function () {
         timer.seconds++;
         if (timer.seconds === 60) {
@@ -163,9 +161,9 @@ let firstCard = null;
 let secondCard = null;
 let firstCardElement = null;
 counter = 0;
+
 // Control when the card is clicked
 let canClick = true;
-
 
 function cardClickHandler() {
     if (!canClick) return;
@@ -173,32 +171,31 @@ function cardClickHandler() {
 
     // Prevent clicking the same card twice
     if (clickedCard === firstCardElement) return;
-
     if (firstClick) {
         startTimer();
         firstClick = false;
     }
     clickedCard.classList.add("clicked");
-
     if (counter === 0) {
         firstCard = clickedCard.getAttribute("data-pokemon");
         firstCardElement = clickedCard;
         counter++;
     } else {
         secondCard = clickedCard.getAttribute("data-pokemon");
-
         if (firstCard === secondCard && firstCardElement !== clickedCard) {
+
             // Match Cards
             clickedCard.classList.add("checked");
             firstCardElement.classList.add("checked");
-
             matchedCards++;
             incrementScore();
             checkForWin();
             counter = 0;
         } else {
+
             // Disable further cards
             canClick = false;
+
             // No match, shake and hide card
             setTimeout(() => {
                 clickedCard.classList.remove("clicked");
@@ -220,17 +217,15 @@ function cardClickHandler() {
 
 //Scores code (Love math)
 let currentScore = 0;
+
 //Increments score by 100
 function incrementScore() {
-
     currentScore += 100;
     document.getElementById("score").innerText = currentScore;
-
 }
 
 //Decrease score by 100
 function descreaseScore() {
-
     if (currentScore >= 100) {
         addTimeToTimer(15);
     }
@@ -238,7 +233,6 @@ function descreaseScore() {
     // It will not go minus
     currentScore = Math.max(0, currentScore - 100);
     document.getElementById("score").innerText = currentScore;
-
 }
 
 function addTimeToTimer(secondsToAdd) {
@@ -249,22 +243,17 @@ function addTimeToTimer(secondsToAdd) {
         timer.minutes++;
         timer.seconds -= 60;
     }
-
     updateTimerDisplay();
 }
 
 // User wins the game
 function winnerMessage() {
-
     let winnerWindow = document.getElementById("winner");
     let span = winnerWindow.querySelector(".close-window");
-
     winnerWindow.style.display = "block";
-
     span.onclick = function () {
         winnerWindow.style.display = "none";
     };
-
     winnerWindow.onclick = function (event) {
         if (event.target == winnerWindow) {
             winnerWindow.style.display = "none";
@@ -303,13 +292,12 @@ document.addEventListener('keydown', function (event) {
 
 function moveFocus(direction) {
     const cards = Array.from(document.getElementsByClassName("card"));
+    
     // Adjust gridSize based on screen width
     // 6 columns for larger screens, 3 columns for smaller screens
     const numCols = window.innerWidth >= 768 ? 3 : 6;
-
     let currentRow = Math.floor(currentFocusIndex / numCols);
     let currentCol = currentFocusIndex % numCols;
-
     switch (direction) {
         case 'left':
             if (currentCol > 0) {
@@ -342,7 +330,6 @@ function moveFocus(direction) {
     cards[currentFocusIndex].setAttribute('tabindex', '-1');
     cards[newIndex].setAttribute('tabindex', '0');
     cards[newIndex].focus();
-
     currentFocusIndex = newIndex;
 }
 
@@ -367,11 +354,9 @@ window.addEventListener('resize', function () {
 // Score list
 function saveScore(name, score) {
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
     if (!name) {
         name = "Anonymous";
     }
-
     highScores.push({
         name: name,
         score: score
@@ -379,7 +364,6 @@ function saveScore(name, score) {
     highScores.sort((a, b) => b.score - a.score);
     // Top 5 scores
     highScores = highScores.slice(0, 5);
-
     localStorage.setItem('highScores', JSON.stringify(highScores));
 }
 
@@ -387,7 +371,6 @@ function saveScore(name, score) {
 function displayHighScores() {
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     const highScoreList = document.getElementById('highScoreList');
-
     highScoreList.innerHTML = highScores.map(score => `<li>${score.name} - ${score.score}</li>`).join('');
 }
 
@@ -415,13 +398,14 @@ window.onload = function () {
 
 // Reset game
 function restart() {
+
     // Reset score
     currentScore = 0;
     document.getElementById("score").innerText = currentScore;
+
     // Reset cards
     // Reset matched cards
     matchedCards = 0;
-
     const cards = Array.from(document.getElementsByClassName("card"));
     cards.forEach(card => {
         card.classList.remove("clicked", "checked", "shake");
@@ -455,6 +439,7 @@ if (closeWindow) {
 
 // Confirmation Modal
 function showConfirmation() {
+    
     // Show the confirmation section
     document.getElementById("confirmationSection").style.display = "block";
 }
