@@ -18,6 +18,7 @@ let audio = document.getElementById("audio");
 
 // Default volume 0%
 audio.volume = 0;
+
 function toggleMusic() {
     if (audio.paused) {
         audio.play();
@@ -292,7 +293,7 @@ document.addEventListener('keydown', function (event) {
 
 function moveFocus(direction) {
     const cards = Array.from(document.getElementsByClassName("card"));
-    
+
     // Adjust gridSize based on screen width
     // 6 columns for larger screens, 3 columns for smaller screens
     const numCols = window.innerWidth >= 768 ? 3 : 6;
@@ -439,7 +440,7 @@ if (closeWindow) {
 
 // Confirmation Modal
 function showConfirmation() {
-    
+
     // Show the confirmation section
     document.getElementById("confirmationSection").style.display = "block";
 }

@@ -14,7 +14,7 @@ body {
 
 body {
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: auto;
     background-color: #12181f;
     color: #EDEDED;
 }
@@ -67,7 +67,6 @@ img {
     margin-bottom: 1rem;
     box-sizing: border-box;
 }
-
 
 /* Buttons class */
 .actions button {
@@ -187,6 +186,8 @@ label[for="musicSlider"] {
     transform: scale(1.03);
 }
 
+/* End of card code */
+
 /* Pokemon card image */
 .card img {
     height: 165px;
@@ -244,7 +245,7 @@ label[for="musicSlider"] {
     margin-bottom: 1rem;
 }
 
-/* not working: https://inclusive-components.design/cards/ */
+/* https://inclusive-components.design/cards/ */
 .card:focus {
     outline: 2px solid #D32F2F;
     background-color: #D32F2F;
@@ -253,6 +254,8 @@ label[for="musicSlider"] {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* End of focus cards */
 
 .high-scores {
     margin-top: 20px;
