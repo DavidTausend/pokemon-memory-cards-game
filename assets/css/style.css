@@ -53,6 +53,10 @@ img {
     height: auto;
 }
 
+header img {
+    width: 80%;
+}
+
 .button-column {
     display: flex;
     align-items: center;
@@ -125,6 +129,8 @@ img {
 }
 
 #nameModal input {
+    height: 40px;
+    margin-right: 1rem;
     font-size: large;
 }
 
@@ -135,6 +141,7 @@ img {
 #instructions ul {
     font-size: 1.5rem;
     text-align: justify;
+    margin-left: 3rem;
 }
 
 .time-score-container {
@@ -303,6 +310,11 @@ label[for="musicSlider"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #nameModal input {
+        height: 20px;
+        margin-bottom: 0.8rem;
     }
 
     #instructions ul {
