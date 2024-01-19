@@ -26,19 +26,19 @@
     <header>
         <div class="introduction">
             <h1>Welcome to the Pokemon Memory Cards Game</h1>
-        <p>Can you remember what's hiding there?</p>
-        <img srcset="
+            <p>Can you remember what's hiding there?</p>
+            <img srcset="
               assets/images/pictures/hidden_pokemon_large.webp  1024w,
               assets/images/pictures/hidden_pokemon_medium.webp  630w,
               assets/images/pictures/hidden_pokemon_small.webp    320w
             " sizes="(min-width: 35em) 65vw, 105vw" src="assets/images/pictures/hidden_pokemon_medium.webp"
-            alt="Hidden pokemons">
+                alt="Hidden pokemons">
         </div>
     </header>
 
     <!-- Main -->
     <main>
-        
+
         <!-- Start Game, Instructions, and Rules Buttons-->
         <div class="button-column">
             <div class="actions">
@@ -150,19 +150,19 @@
 
             <!-- Buttons -->
             <div id="button-container">
-                <button onclick="restart()">Restart</button>
-                <button onclick="toggleMusic()">Play/Pause Music</button>
-                <button onclick="showConfirmation()">Quit Game</button>
+                <button id="restart-button">Restart</button>
+                <button id="toggle-music-button">Play/Pause Music</button>
+                <button id="quit-game-button">Quit Game</button>
             </div>
         </div>
 
         <!-- Quit Confirmation Window -->
-        <div id="confirmationSection" class="window" style="display: none;">
+        <div id="confirmation-section" class="window" style="display: none;">
             <div class="window-content">
                 <p>Are you sure you want to proceed?</p>
                 <div class="play-again-button">
-                    <button onclick="confirmAction()">Confirm</button>
-                    <button onclick="cancelAction()">Cancel</button>
+                    <button id="confirm-action-button">Confirm</button>
+                    <button id="cancel-action-button">Cancel</button>
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
                     <ul id="highScoreList"></ul>
                 </div>
                 <div class="play-again-button">
-                    <button onclick="restart()">Play Again</button>
+                    <button id="restart-button">Play Again</button>
                 </div>
             </div>
         </div>

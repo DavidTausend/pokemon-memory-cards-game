@@ -8,6 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('rules-button').addEventListener('click', function () {
         toggleModal('rules', true);
     });
+    document.getElementById('restart-button').addEventListener('click', restart);
+    document.getElementById('toggle-music-button').addEventListener('click', toggleMusic);
+    document.getElementById('quit-game-button').addEventListener('click', showConfirmation);
+    document.getElementById('confirm-action-button').addEventListener('click', confirmAction);
+    document.getElementById('cancel-action-button').addEventListener('click', cancelAction);
+
+    // Event listener for the close button in the high score window
+    let closeHighScoreWindow = document.getElementById("winner").getElementsByClassName("close-window")[0];
+    if (closeHighScoreWindow) {
+        closeHighScoreWindow.addEventListener('click', function() {
+            document.getElementById("winner").style.display = "none";
+            document.getElementsByClassName('introduction')[0].style.display = 'block';
+            document.getElementsByClassName('button-column')[0].style.display = 'block';
+            document.getElementsByClassName('content-container')[0].style.display = 'none';
+        });
+    }
 });
 
 // https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
@@ -485,17 +501,18 @@ if (closeWindow) {
 function showConfirmation() {
 
     // Show the confirmation section
-    document.getElementById("confirmationSection").style.display = "block";
+    document.getElementById("confirmation-section").style.display = "block";
 }
 
 function confirmAction() {
-    document.getElementById("confirmationSection").style.display = "none";
+    document.getElementById("confirmation-section").style.display = "none";
     document.getElementsByClassName('content-container')[0].style.display = 'none';
     document.getElementsByClassName('button-column')[0].style.display = 'block';
+    document.getElementsByClassName('introduction')[0].style.display = 'block';
 }
 
 function cancelAction() {
-    document.getElementById("confirmationSection").style.display = "none";
+    document.getElementById("confirmation-section").style.display = "none";
 }
 
 window.onload = function () {
