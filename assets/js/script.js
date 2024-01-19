@@ -112,6 +112,8 @@ function shuffleArray(array) {
 }
 
 // Select the pokemon cards and display them
+let cardsArray = [];
+
 function selectAndDisplayCards() {
 
     // Pokemon List
@@ -146,19 +148,18 @@ function selectAndDisplayCards() {
         cardElement.appendChild(imgElement);
         cardContainer.appendChild(cardElement);
     });
-    attachCardEventListeners();
+    cardsArray = Array.from(document.getElementsByClassName("card"));
 
     // Focus the first card for the keyboard
     if (cardsArray.length > 0) {
         cardsArray[0].focus();
     }
+    attachCardEventListeners();
 }
 
 let currentFocusIndex = 0;
 
 function attachCardEventListeners() {
-    const cards = document.getElementsByClassName("card");
-    cardsArray = Array.from(cards);
 
     // Set tabindex for the first card to '0' and others to '-1'
     cardsArray.forEach((card, index) => {
