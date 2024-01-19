@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('start-game-button').addEventListener('click', function () {
+        resetGame();
         toggleModal('name-modal', true);
     });
     document.getElementById('instructions-button').addEventListener('click', function () {
@@ -13,16 +14,34 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('quit-game-button').addEventListener('click', showConfirmation);
     document.getElementById('confirm-action-button').addEventListener('click', confirmAction);
     document.getElementById('cancel-action-button').addEventListener('click', cancelAction);
+    document.getElementById('play-again').addEventListener('click', restart);
 
     // Event listener for the close button in the high score window
     let closeHighScoreWindow = document.getElementById("winner").getElementsByClassName("close-window")[0];
     if (closeHighScoreWindow) {
-        closeHighScoreWindow.addEventListener('click', function() {
+        closeHighScoreWindow.addEventListener('click', function () {
             document.getElementById("winner").style.display = "none";
             document.getElementsByClassName('introduction')[0].style.display = 'block';
             document.getElementsByClassName('button-column')[0].style.display = 'block';
             document.getElementsByClassName('content-container')[0].style.display = 'none';
         });
+    }
+
+    function resetGame() {
+        currentScore = 0;
+        document.getElementById("score").innerText = currentScore;
+        matchedCards = 0;
+        const cards = Array.from(document.getElementsByClassName("card"));
+        cards.forEach(card => {
+            card.classList.remove("clicked", "checked", "shake");
+        });
+        resetTimer();
+        selectAndDisplayCards();
+
+        // Hide main menu , show game
+        document.getElementsByClassName('introduction')[0].style.display = 'none';
+        document.getElementsByClassName('button-column')[0].style.display = 'none';
+        document.getElementsByClassName('content-container')[0].style.display = 'block';
     }
 });
 
@@ -455,32 +474,22 @@ function onGameEnd() {
     displayHighScores();
 }
 
-
 // Reset game
 function restart() {
-
-    // Reset score
     currentScore = 0;
     document.getElementById("score").innerText = currentScore;
-
-    // Reset cards
-    // Reset matched cards
     matchedCards = 0;
     const cards = Array.from(document.getElementsByClassName("card"));
     cards.forEach(card => {
         card.classList.remove("clicked", "checked", "shake");
-        // Reset the image to hidden again
         const img = card.querySelector("img");
         if (img) img.style.opacity = '0';
     });
 
     selectAndDisplayCards();
     attachCardEventListeners();
-    // Reset timer
     resetTimer();
-    // Reset firstClick to true for the next game
     firstClick = true;
-    // Close winning window
     closeWinnerWindow();
 }
 
