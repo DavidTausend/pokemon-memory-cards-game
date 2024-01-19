@@ -32,13 +32,21 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
   * [Components](#components)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
+    + [Main Menu](#main-menu)
+    + [Game Screen](#game-screen)
+    + [End of Game Screen](#end-of-game-screen)
 - [Features](#features)
+  * [Player's Name](#player-s-name)
+    + [Regular Expression](#regular-expression)
   * [Music](#music)
   * [Score](#score)
+    + [High Score](#high-score)
   * [Reset Game](#reset-game)
   * [Timer](#timer)
   * [Schuffle cards](#schuffle-cards)
   * [Keyboard](#keyboard)
+  * [Quit Game](#quit-game)
+    + [Confirm Quit Game](#confirm-quit-game)
   * [Future Implementations](#future-implementations)
     + [Multiplayer Mode](#multiplayer-mode)
     + [Additional Levels and Difficulty Settings](#additional-levels-and-difficulty-settings)
@@ -49,6 +57,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [Feedback](#feedback)
     + [Pokemon API Integration](#pokemon-api-integration)
     + [Achievements and Rewards](#achievements-and-rewards)
+    + [Database](#database)
 - [Technologies](#technologies)
   * [Programming Languages](#programming-languages)
   * [Applications, Plugins & Tools Used](#applications--plugins---tools-used)
@@ -63,6 +72,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [Validator Testing](#validator-testing)
       - [HTML](#html)
       - [CSS](#css)
+      - [JavaScript](#javascript)
     + [LightHouse](#lighthouse)
       - [Desktop](#desktop)
       - [Mobile](#mobile)
@@ -76,6 +86,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
       - [Browsers](#browsers)
   * [Bugs](#bugs)
     + [Known Bugs](#known-bugs)
+      - [Multiple Card Click Issue](#multiple-card-click-issue)
     + [Solved Bugs](#solved-bugs)
 - [Credits](#credits)
   * [Content](#content)
@@ -153,19 +164,25 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 #### Main Menu 
 
 ![Main Menu Desktop](/assets/images/readme/wireframes/desktop_menu.webp)
+<br>
 ![Main Menu iPad](/assets/images/readme/wireframes/ipad_menu.webp)
+<br>
 ![Main Menu iPhone](/assets/images/readme/wireframes/iphone_menu.webp)
 
 #### Game Screen
 
 ![Game Screen Desktop](/assets/images/readme/wireframes/desktop_game.webp)
+<br>
 ![Game Screen iPad](/assets/images/readme/wireframes/ipad_game.webp)
+<br>
 ![Game Screen iPhone](/assets/images/readme/wireframes/iphone_game.webp)
 
 #### End of Game Screen
 
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/desktop_end.webp)
+<br>
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/ipad_end.webp)
+<br>
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/iphone_end.webp)
 
 
@@ -201,6 +218,12 @@ The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 
 #### High Score
 
+The High Score feature in the Pokemon Memory Card Game enhances competitiveness:
+
+- High scores are recorded, showcasing players' top performances.
+- A leaderboard displays the top 5 scores with player names.
+- Scores are saved locally, allowing players to track their progress.
+- This feature motivates players to improve and replay for higher scores.
 
 ### Reset Game
 
@@ -472,87 +495,101 @@ Accessibility testing was conducted using WAVE and Lighthouse tools, ensuring th
 |Responsiveness of Name Input|The name input field should be easily accessible and functional on all devices.|Tested the responsiveness and functionality of the name input on different devices and browsers.|Name input was responsive and worked as expected on all tested devices and browsers.|Pass ✅|
 |Interaction with Game Progress|Entering a name should not affect the game's progress or performance.|Tested game play before and after entering a name to observe any changes in game performance.|Game performance remained consistent and unaffected by the name entry.|Pass ✅|
 
+
 `Music`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Music Control Functionality|Players should be able to play, pause, and adjust the volume of the background music.|Tested the music controls across different devices and browsers.|Music controls functioned correctly, allowing for play, pause, and volume adjustment.|Pass ✅|
+|Music Preference Retention|The game should remember the player's music settings even after restarting the game.|Tested restarting the game to check if music settings (volume, play/pause) are retained.|Music settings were successfully retained and restored after restarting the game.|Pass ✅|
+|Background Music Responsiveness|Music should not interfere with game performance or responsiveness.|Tested game responsiveness while playing music on various devices.|Game remained responsive and performance was not affected by background music.|Pass ✅|
+|Music Settings Accessibility|Music control options should be easily accessible and intuitive for users.|Evaluated the accessibility and ease of use of music controls for players.|Music settings were easily accessible and user-friendly across different devices.|Pass ✅|
+
 
 `Score`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Accurate Score Calculation|Accurate Score Calculation|Tested scoring by matching and mismatching cards in the game.|Scores were calculated correctly, increasing for matches and decreasing for mismatches.|Pass ✅|
+|Score Display Clarity|The score should be clearly displayed and easy to read during the game.|Checked the visibility and clarity of the score display on various devices.|The score was prominently displayed and easy to read on all tested devices.|Pass ✅|
+|Score Reset on New Game|Score should reset to zero at the start of a new game.|Tested score reset functionality by starting new games.|Score reset to zero successfully at the beginning of each new game.|Score reset to zero successfully at the beginning of each new game.|
+|Score Influence on Gameplay|The scoring system should motivate players to improve their performance.|Observed player reactions and feedback regarding the scoring system.|Players reported that the scoring system added a competitive element and motivated them to improve.|Pass ✅|
+
 
 `High Score`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|High Score Recording|High scores should be accurately recorded and stored.|Played multiple games to generate high scores and checked if they were correctly recorded.|High scores were accurately recorded and displayed in the high score list.|Pass ✅|
+|High Score Display|High scores should be clearly displayed on the screen.|Reviewed the high score display on different devices and browsers.	|High scores were clearly visible and correctly formatted on all tested devices and browsers.|Pass ✅|
+|High Score Persistence|High scores should persist between game sessions.|Tested the game on multiple occasions to see if high scores were retained.|High scores were consistently retained across different gaming sessions.|Pass ✅|
+|High Score Limit	|Only the top scores should be displayed, limiting to a certain number (e.g., top 5).|Only the top scores should be displayed, limiting to a certain number (e.g., top 5).|The game successfully displayed only the top set number of high scores.|Pass ✅|
+
 
 `Reset Game`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Game Reset Functionality|Clicking the 'Reset' button should reset the game to its initial state.|Tested the reset button in various game stages.|The game successfully reset to its initial state with shuffled cards and reset scores.|Pass ✅|
+|Timer Reset on New Game|Timer should reset to zero at the start of a new game.|Checked the timer reset function by starting new games.|The timer reset to zero successfully at the beginning of each new game.|Pass ✅|
+|Card Reset on New Game|All cards should return to their default state at the start of a new game.|Tested card state reset by starting new games after completing or during ongoing games.|Cards returned to their default state and shuffled correctly at the start of each new game.|Pass ✅|
+|Score Reset on New Game|Score should reset to zero at the start of a new game.|Tested score reset functionality by starting new games.|Score reset to zero successfully at the beginning of each new game.|Pass ✅|
+
 
 `Timer`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Timer Accuracy|The timer should accurately track game duration in minutes and seconds.|Monitored the timer during multiple games for accuracy.|The timer accurately reflected the elapsed game time in all tests.|Pass ✅|
+|Timer Visibility|The timer should be clearly visible during gameplay.|Checked the visibility of the timer on various devices and screen sizes.|The timer was clearly visible and easily readable on all tested devices.|Pass ✅|
+|Timer Reset Functionality|The timer should reset to 0:00 at the start of each new game.|Tested the timer reset function by starting new games.|The timer reset to 0:00 successfully at the start of each new game.|Pass ✅|
+|Timer Continuity|The timer should run continuously without interruption unless the game is reset or completed.|Observed the timer's behavior during ongoing gameplay|The timer ran continuously and without interruption across all games.|Pass ✅|
+
 
 `Schuffle cards`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Random Card Shuffling|Each new game should start with a randomly shuffled set of cards.|Started multiple games to check for randomness in card arrangement.|Cards were shuffled randomly at the beginning of each new game.|Pass ✅|
+|Consistent Shuffle Mechanism|Shuffling mechanism should be consistent and unbiased.|Analyzed the shuffle algorithm and tested repeatedly.|The shuffle mechanism worked consistently and showed no patterns or biases.|Pass ✅|
+|Shuffle on Game Reset|Cards should be reshuffled when the game is reset.|Tested card shuffling by using the reset feature during gameplay.|Cards were successfully reshuffled every time the game was reset.|Pass ✅|
+|Shuffle Functionality Across Browsers|Card shuffling should work uniformly across different browsers.|Tested card shuffling on various browsers for consistency.|Shuffle functionality was consistent and effective on all tested browsers.|Pass ✅|
+
+
+`Keyboard`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|Keyboard Navigation|Players should be able to navigate and select cards using the keyboard.|Tested navigation and card selection with arrow keys and enter key.|Keyboard navigation was smooth and intuitive, with all functionalities accessible.|Pass ✅|
+|Responsive Keyboard Inputs|Keyboard inputs should respond promptly without lag.|Tested responsiveness of keyboard inputs during gameplay.|Keyboard inputs were immediately responsive, ensuring a seamless gaming experience.|Pass ✅|
+|Keyboard Accessibility|Game should be fully playable using only the keyboard.|Played the game using only keyboard controls to test full functionality.|The game was fully playable using the keyboard, enhancing accessibility for all users.|Pass ✅|
+|Focus Indication|The card in focus should be clearly indicated when using keyboard navigation.|Checked for visual indication of the focused card when using the keyboard.|The focused card was clearly highlighted during keyboard navigation, aiding in usability.|Pass ✅|
+
 
 `Quit Game`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Functionality of Quit Button|Clicking 'Quit Game' should initiate the quitting process.|Tested the 'Quit Game' button in various stages of gameplay.|The 'Quit Game' button functioned correctly, initiating the quitting process as intended.|Pass ✅|
+|Confirm Quit Prompt|A confirmation prompt should appear after clicking 'Quit Game'.|Tested the appearance and functionality of the confirmation prompt.|The confirmation prompt appeared correctly after clicking 'Quit Game', asking for user confirmation.|Pass ✅|
+|Cancellation of Quitting|Players should be able to cancel quitting and resume the game.|Tested the ability to cancel the quitting process and resume gameplay.|Cancellation of quitting worked effectively, allowing players to resume their game.|Pass ✅|
+|Game State Preservation|Game state should remain unchanged if quitting is canceled.|Checked if the game state (score, timer, card positions) remained the same after canceling quitting.|The game state was successfully preserved when quitting was canceled.|Pass ✅|
+
 
 `Confirm Quit Game`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
-|  |  |  | | |
+|Confirmation Functionality|Selecting 'Confirm' should successfully exit the game.|Tested the 'Confirm' button functionality within the confirmation modal.|Clicking 'Confirm' correctly exited the game and returned to the main menu.|Pass ✅|
+|Game State Reset on Confirm|Game state should reset (score, timer, etc.) after confirming to quit.|Checked if the game state reset to initial values after confirming to quit.|Upon confirming to quit, the game state, including score and timer, was reset as expected.|Pass ✅|
+|No Accidental Exits|Game should not exit without explicit confirmation from the player.|Tested various scenarios to ensure the game doesn't exit without player's confirmation.|The game remained active until the player explicitly confirmed to quit, preventing accidental exits.|Pass ✅|
+|User Experience with Confirmation Modal|The confirmation modal should be user-friendly and clear.|Evaluated the design and clarity of the confirmation modal for user understanding.|The confirmation modal was user-friendly, with clear options for confirming or canceling the quit action.|Pass ✅|
 
 ### Bugs
 
 #### Known Bugs
 
 ##### Multiple Card Click Issue
-
-If the user quickly clicks several cards, the first card doesn't flip back, disrupting the game flow. This allows more than two cards to be visible simultaneously, which is against the game's rules and reduces the challenge.
-
-A possible fix might be adding a delay or disabling clicks until the first two cards' animations finish.
 
 #### Solved Bugs
 
