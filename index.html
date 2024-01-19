@@ -42,19 +42,19 @@
         <!-- Start Game, Instructions, and Rules Buttons-->
         <div class="button-column">
             <div class="actions">
-                <button onclick="toggleModal('nameModal', true)">Start Game</button>
-                <button onclick="toggleModal('instructions', true)">Instructions</button>
-                <button onclick="toggleModal('rules', true)">Rules</button>
+                <button id="start-game-button">Start Game</button>
+                <button id="instructions-button">Instructions</button>
+                <button id="rules-button">Rules</button>
             </div>
         </div>
 
         <!-- Name Modal -->
-        <div id="nameModal" class="window">
+        <div id="name-modal" class="window">
             <div class="window-content">
                 <span class="close-window">&times;</span>
                 <h2>Please Enter Your Name</h2>
-                <label for="playerNameInput">Name:</label>
-                <input type="text" id="playerNameInput" placeholder="Players Name">
+                <label for="player-name-input">Name:</label>
+                <input type="text" id="player-name-input" placeholder="Players Name">
                 <button onclick="submitName()">Submit</button>
             </div>
         </div>

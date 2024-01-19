@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('start-game-button').addEventListener('click', function() {
+        toggleModal('name-modal', true);
+    });
+    document.getElementById('instructions-button').addEventListener('click', function() {
+        toggleModal('instructions', true);
+    });
+    document.getElementById('rules-button').addEventListener('click', function() {
+        toggleModal('rules', true);
+    });
+});
+
 // https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
 function toggleModal(windowId, show) {
     let modalWindow = document.getElementById(windowId);
@@ -22,7 +34,7 @@ Array.from(document.getElementsByClassName('close-window')).forEach(button => {
 });
 
 function submitName() {
-    let playerNameInput = document.getElementById("playerNameInput");
+    let playerNameInput = document.getElementById("player-name-input");
     let playerName = playerNameInput.value;
 
     // Regular expression to allow only letters and spaces
@@ -40,7 +52,7 @@ function submitName() {
     localStorage.setItem("playerName", playerName);
 
      // Close Name Modal
-     let nameModal = document.getElementById("nameModal");
+     let nameModal = document.getElementById("name-modal");
      nameModal.style.display = 'none';
     
     // Hide the start game and show the game
@@ -126,19 +138,15 @@ function selectAndDisplayCards() {
     const cardContainer = document.getElementsByClassName("cards")[0];
     // Clear existing cards
     cardContainer.innerHTML = '';
-
     selectedPokemon.forEach(pokemon => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         cardElement.setAttribute("data-pokemon", pokemon);
-
         const imgElement = document.createElement("img");
         imgElement.src = `assets/images/cards/${pokemon}.webp`;
         imgElement.alt = `${pokemon} pokemon`;
-
         cardElement.appendChild(imgElement);
         cardContainer.appendChild(cardElement);
-
     });
     attachCardEventListeners();
 
@@ -163,8 +171,6 @@ function attachCardEventListeners() {
     // Focus index to 0
     currentFocusIndex = 0;
 }
-
-window.onload = selectAndDisplayCards();
 
 //Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
 // Timer variables

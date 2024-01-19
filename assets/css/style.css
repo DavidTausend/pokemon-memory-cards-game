@@ -120,7 +120,7 @@ header img {
     text-decoration: none;
 }
 
-#nameModal button {
+#name-modal button {
     padding: 0.7rem 3rem;
     border-radius: 0.8rem;
     background-color: #D32F2F;
@@ -128,7 +128,7 @@ header img {
     margin-bottom: 1rem;
 }
 
-#nameModal input {
+#name-modal input {
     height: 40px;
     margin-right: 1rem;
     font-size: large;
@@ -312,7 +312,7 @@ label[for="musicSlider"] {
         justify-content: center;
     }
 
-    #nameModal input {
+    #name-modal input {
         height: 20px;
         margin-bottom: 0.8rem;
     }
@@ -327,7 +327,7 @@ label[for="musicSlider"] {
     }
 
     .actions button,
-    #nameModal button,
+    #name-modal button,
     #button-container button,
     .play-again-button button {
         /* smaller buttons */
@@ -375,7 +375,7 @@ label[for="musicSlider"] {
     }
 
     .actions button,
-    #nameModal button,
+    #name-modal button,
     #button-container button,
     .play-again-button button {
         padding: 0.8rem 3.5rem;
@@ -410,7 +410,7 @@ label[for="musicSlider"] {
     }
 
     .actions button,
-    #nameModal button,
+    #name-modal button,
     #button-container button,
     .play-again-button button {
         margin-top: 0.5rem;
