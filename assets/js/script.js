@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('start-game-button').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('start-game-button').addEventListener('click', function () {
         toggleModal('name-modal', true);
     });
-    document.getElementById('instructions-button').addEventListener('click', function() {
+    document.getElementById('instructions-button').addEventListener('click', function () {
         toggleModal('instructions', true);
     });
-    document.getElementById('rules-button').addEventListener('click', function() {
+    document.getElementById('rules-button').addEventListener('click', function () {
         toggleModal('rules', true);
     });
 });
@@ -45,20 +45,18 @@ function submitName() {
     }
 
     // Regular expression matches the player name
-    if (!nameRegex.test(playerName)) {
-        alert('Your name must contain only letters and spaces.');
-        return;
-    }
-    localStorage.setItem("playerName", playerName);
+    if (nameRegex.test(playerName)) {
+        localStorage.setItem("playerName", playerName);
 
-     // Close Name Modal
-     let nameModal = document.getElementById("name-modal");
-     nameModal.style.display = 'none';
-    
-    // Hide the start game and show the game
-    document.getElementsByClassName('introduction')[0].style.display = 'none';
-    document.getElementsByClassName('button-column')[0].style.display = 'none';
-    document.getElementsByClassName('content-container')[0].style.display = 'block';
+        // Close Name Modal
+        let nameModal = document.getElementById("name-modal");
+        nameModal.style.display = 'none';
+
+        // Hide the start game and show the game
+        document.getElementsByClassName('introduction')[0].style.display = 'none';
+        document.getElementsByClassName('button-column')[0].style.display = 'none';
+        document.getElementsByClassName('content-container')[0].style.display = 'block';
+    }
 }
 
 // Music Setting
@@ -511,7 +509,4 @@ window.onload = function () {
         audio.volume = savedVolume;
         document.getElementById("sliderValue").textContent = volumePercentage;
     }
-
-    // Hide the game
-    document.getElementsByClassName('content-container')[0].style.display = 'none';
 };
