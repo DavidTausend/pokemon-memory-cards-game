@@ -91,6 +91,8 @@ function submitName() {
         document.getElementsByClassName('introduction')[0].style.display = 'none';
         document.getElementsByClassName('button-column')[0].style.display = 'none';
         document.getElementsByClassName('content-container')[0].style.display = 'block';
+    } else {
+        alert('Invalid name. Please use only letters and spaces.');
     }
 }
 

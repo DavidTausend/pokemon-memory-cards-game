@@ -86,7 +86,6 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
       - [Browsers](#browsers)
   * [Bugs](#bugs)
     + [Known Bugs](#known-bugs)
-      - [Multiple Card Click Issue](#multiple-card-click-issue)
     + [Solved Bugs](#solved-bugs)
 - [Credits](#credits)
   * [Content](#content)
@@ -164,25 +163,37 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 #### Main Menu 
 
 ![Main Menu Desktop](/assets/images/readme/wireframes/desktop_menu.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![Main Menu iPad](/assets/images/readme/wireframes/ipad_menu.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![Main Menu iPhone](/assets/images/readme/wireframes/iphone_menu.webp)
 
 #### Game Screen
 
 ![Game Screen Desktop](/assets/images/readme/wireframes/desktop_game.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![Game Screen iPad](/assets/images/readme/wireframes/ipad_game.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![Game Screen iPhone](/assets/images/readme/wireframes/iphone_game.webp)
 
 #### End of Game Screen
 
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/desktop_end.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/ipad_end.webp)
-<br>
+
+<kbd>&nbsp;</kbd>
+
 ![End of Game Screen Wireframe](/assets/images/readme/wireframes/iphone_end.webp)
 
 
@@ -589,7 +600,7 @@ Accessibility testing was conducted using WAVE and Lighthouse tools, ensuring th
 
 #### Known Bugs
 
-##### Multiple Card Click Issue
+There are currently no known bugs in the Pokemon Memory Card Game. The game has been thoroughly tested across various platforms, devices, and scenarios to ensure a seamless and enjoyable gaming experience for all users.
 
 #### Solved Bugs
 
