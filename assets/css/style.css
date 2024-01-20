@@ -1,3 +1,6 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -17,6 +20,7 @@ body {
     min-width: auto;
     background-color: #12181f;
     color: #EDEDED;
+    font-family: 'Roboto', sans-serif; 
 }
 
 header {
@@ -76,6 +80,7 @@ header img {
     background-color: #D32F2F;
     color: #ffffff;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -126,6 +131,7 @@ header img {
     background-color: #D32F2F;
     color: #ffffff;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 #name-modal input {
@@ -251,6 +257,7 @@ label[for="musicSlider"] {
     background-color: #D32F2F;
     color: #ffffff;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* https://inclusive-components.design/cards/ */
@@ -287,6 +294,7 @@ label[for="musicSlider"] {
     background-color: #D32F2F;
     color: #ffffff;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* Media query for extra small devices (phones, less than 768px) */

@@ -15,6 +15,8 @@
 
 ## Introduction
 
+<div align="center"><img src="assets/images/readme/introduction/web_preview.webp"></div>
+
 Experience the fun and challenge of the Pokémon Memory Card Game, designed for all ages with vibrant graphics and beloved Pokémon characters. Start your engaging Pokémon adventure now!
 
 <br>
@@ -123,6 +125,10 @@ The Pokémon Memory Card Game, with its user-centered design, offers a simple, f
 
 ## Design
 
+### Typography
+
+The Pokemon Memory Card Game utilizes the Roboto font, imported from Google Fonts, to enhance readability and aesthetics. This choice of typography contributes to the game's modern and user-friendly interface.
+
 ### Color Scheme
 
 The game's color scheme is dynamic and engaging, drawing from the colorful Pokemon universe: 
@@ -201,6 +207,8 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ### Player's Name
 
+<div align="center"><img src="assets/images/readme/features/players_name.webp"></div>
+
 The player is able to give the name in the Pokemon Memory Card Game, a regular expression validates player names to only include alphabetic characters and spaces. This ensures consistent and proper name formatting, enhancing user experience.
 
 #### Regular Expression
@@ -216,9 +224,15 @@ The regular expression `^[A-Za-z\s]+$` is used in the game for validating player
 
 ### Music
 
+<div align="center"><img src="assets/images/readme/features/music/music_setting.webp"></div>
+
+<div align="center"><img src="assets/images/readme/features/music/music_button.webp"></div>
+
 Music plays a significant role in enhancing the gameplay experience. A background track adds to the game's ambiance, creating an engaging atmosphere. Players have control over the music with features to play, pause, and adjust the volume. This functionality not only personalizes the experience but also makes the game more accessible and enjoyable for all users, regardless of their audio preferences.
 
 ### Score
+
+<div align="center"><img src="assets/images/readme/features/score.webp></div>
 
 The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 
@@ -242,6 +256,8 @@ The Reset Game feature in the Pokemon Memory Card Game enables players to restar
 
 ### Timer
 
+<div align="center"><img src="assets/images/readme/features/timer.webp></div>
+
 In the Pokemon Memory Card Game, a timer starts with the first card flip, displaying time in minutes and seconds. It adds an element of challenge, allowing players to track their speed. The timer resets for each new game, ensuring consistent time tracking.
 
 ### Schuffle cards
@@ -250,7 +266,7 @@ The game shuffles the Pokemon cards before each round, ensuring a unique and cha
 
 ### Keyboard
 
-The game integrates keyboard navigation, enabling players to interact with the game using keyboard inputs. This feature enhances accessibility, allowing users who prefer or require keyboard navigation to fully engage with the game.
+The game integrates keyboard navigation, enabling players to interact with the game using keyboard inputs: left, right and enter to select the card. This feature enhances accessibility, allowing users who prefer or require keyboard navigation to fully engage with the game.
 
 ### Quit Game
 
