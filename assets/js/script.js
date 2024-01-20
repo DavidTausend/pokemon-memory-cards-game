@@ -54,7 +54,7 @@ function toggleModal(windowId, show) {
 // Closing modals when clicking outside
 Array.from(document.getElementsByClassName('window')).forEach(modal => {
     modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
+        if (event.target === modal && modal.id !== "name-modal") {
             toggleModal(modal.id, false);
         }
     });

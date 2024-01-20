@@ -20,7 +20,7 @@ body {
     min-width: auto;
     background-color: #12181f;
     color: #EDEDED;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -144,7 +144,8 @@ header img {
     display: none;
 }
 
-#instructions ul {
+#instructions ul,
+#rules ul {
     font-size: 1.5rem;
     text-align: justify;
     margin-left: 3rem;
