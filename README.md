@@ -30,6 +30,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [User goals](#user-goals)
     + [Company goals](#company-goals)
 - [Design](#design)
+  * [Typography](#typography)
   * [Color Scheme](#color-scheme)
   * [Components](#components)
   * [Imagery](#imagery)
@@ -38,6 +39,8 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
     + [Game Screen](#game-screen)
     + [End of Game Screen](#end-of-game-screen)
 - [Features](#features)
+  * [Instructions](#instructions)
+  * [Rules](#rules)
   * [Player's Name](#player-s-name)
     + [Regular Expression](#regular-expression)
   * [Music](#music)
@@ -50,6 +53,7 @@ Experience the fun and challenge of the Pokémon Memory Card Game, designed for 
   * [Quit Game](#quit-game)
     + [Confirm Quit Game](#confirm-quit-game)
   * [Future Implementations](#future-implementations)
+    + [Keyboard Functionality](#keyboard-functionality)
     + [Multiplayer Mode](#multiplayer-mode)
     + [Additional Levels and Difficulty Settings](#additional-levels-and-difficulty-settings)
     + [Social Media Integration](#social-media-integration)
@@ -205,6 +209,18 @@ Wireframes for the Pokemon Memory Card Game detail the layout and user interacti
 
 ## Features
 
+### Instructions
+
+<div align="center"><img src="assets/images/readme/features/instructions.webp"></div>
+
+The "Instructions" feature in the Pokémon Memory Card Game, accessible via a button on the main menu, opens a modal with concise details on game mechanics, including starting the game, card-flipping techniques, scoring, winning conditions, and strategic tips. This feature caters to both new and returning players, ensuring a clear understanding of gameplay.
+
+### Rules
+
+<div align="center"><img src="assets/images/readme/features/rules.webp"></div>
+
+Accessible through a main menu button, the "Rules" feature outlines the game's structure. It includes rules for card matching, gameplay limits, time constraints, point deduction, and various game-ending scenarios. This section is crucial for ensuring players understand the game's framework, promoting a fair and competitive play environment.
+
 ### Player's Name
 
 <div align="center"><img src="assets/images/readme/features/players_name.webp"></div>
@@ -243,7 +259,7 @@ The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 
 #### High Score
 
-<div align="center"><img src="assets/images/readme/features/></div>
+<div align="center"><img src="assets/images/readme/features/high_score.webp></div>
 
 The High Score feature in the Pokemon Memory Card Game enhances competitiveness:
 
@@ -254,8 +270,7 @@ The High Score feature in the Pokemon Memory Card Game enhances competitiveness:
 
 ### Reset Game
 
-
-<div align="center"><img src="assets/images/readme/features/></div>
+<div align="center"><img src="assets/images/readme/features/restart.webp></div>
 
 The Reset Game feature in the Pokemon Memory Card Game enables players to restart their game, resetting the score, reshuffling cards, and resetting the timer, ensuring a fresh gameplay experience each time.
 
@@ -267,25 +282,23 @@ In the Pokemon Memory Card Game, a timer starts with the first card flip, displa
 
 ### Schuffle cards
 
-<div align="center"><img src="assets/images/readme/features/></div>
+<div align="center"><img src="assets/images/readme/features/cards.webpdiv>
 
 The game shuffles the Pokemon cards before each round, ensuring a unique and challenging experience each time. This randomization is key to the memory aspect of the game, as it prevents memorization of card positions from previous games.
 
 ### Keyboard
 
-<div align="center"><img src="assets/images/readme/features/></div>
-
 The game integrates keyboard navigation, enabling players to interact with the game using keyboard inputs: left, right and enter to select the card. This feature enhances accessibility, allowing users who prefer or require keyboard navigation to fully engage with the game.
 
 ### Quit Game
 
-<div align="center"><img src="assets/images/readme/features/></div>
+<div align="center"><img src="assets/images/readme/features/quit.webp></div>
 
 A "Quit Game" feature is available, providing players with an option to exit the game session. This feature is particularly useful for users who wish to end their current game and return to the main menu or close the application.
 
 #### Confirm Quit Game
 
-<div align="center"><img src="assets/images/readme/features/></div>
+<div align="center"><img src="assets/images/readme/features/confirm.webp></div>
 
 Upon selecting "Quit Game," a confirmation prompt is displayed, ensuring that players don't accidentally exit their game. This additional step helps prevent unintended game closures, offering a user-friendly experience by safeguarding players' game progress.
 

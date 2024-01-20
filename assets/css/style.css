@@ -326,7 +326,8 @@ label[for="musicSlider"] {
         margin-bottom: 0.8rem;
     }
 
-    #instructions ul {
+    #instructions ul,
+    #rules ul {
         font-size: 1rem;
     }
 
