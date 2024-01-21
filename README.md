@@ -248,7 +248,7 @@ Music plays a significant role in enhancing the gameplay experience. A backgroun
 
 ### Score
 
-<div align="center"><img src="assets/images/readme/features/score.webp></div>
+<div align="center"><img src="assets/images/readme/features/score.webp"></div>
 
 The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 
@@ -259,7 +259,7 @@ The scoring system in the "Pokemon Memory Card Game" adds a competitive element:
 
 #### High Score
 
-<div align="center"><img src="assets/images/readme/features/high_score.webp></div>
+<div align="center"><img src="assets/images/readme/features/high_score.webp"></div>
 
 The High Score feature in the Pokemon Memory Card Game enhances competitiveness:
 
@@ -270,19 +270,19 @@ The High Score feature in the Pokemon Memory Card Game enhances competitiveness:
 
 ### Reset Game
 
-<div align="center"><img src="assets/images/readme/features/restart.webp></div>
+<div align="center"><img src="assets/images/readme/features/restart.webp"></div>
 
 The Reset Game feature in the Pokemon Memory Card Game enables players to restart their game, resetting the score, reshuffling cards, and resetting the timer, ensuring a fresh gameplay experience each time.
 
 ### Timer
 
-<div align="center"><img src="assets/images/readme/features/timer.webp></div>
+<div align="center"><img src="assets/images/readme/features/timer.webp"></div>
 
 In the Pokemon Memory Card Game, a timer starts with the first card flip, displaying time in minutes and seconds. It adds an element of challenge, allowing players to track their speed. The timer resets for each new game, ensuring consistent time tracking.
 
 ### Schuffle cards
 
-<div align="center"><img src="assets/images/readme/features/cards.webpdiv>
+<div align="center"><img src="assets/images/readme/features/cards.webp"><div>
 
 The game shuffles the Pokemon cards before each round, ensuring a unique and challenging experience each time. This randomization is key to the memory aspect of the game, as it prevents memorization of card positions from previous games.
 
@@ -292,13 +292,13 @@ The game integrates keyboard navigation, enabling players to interact with the g
 
 ### Quit Game
 
-<div align="center"><img src="assets/images/readme/features/quit.webp></div>
+<div align="center"><img src="assets/images/readme/features/quit.webp"></div>
 
 A "Quit Game" feature is available, providing players with an option to exit the game session. This feature is particularly useful for users who wish to end their current game and return to the main menu or close the application.
 
 #### Confirm Quit Game
 
-<div align="center"><img src="assets/images/readme/features/confirm.webp></div>
+<div align="center"><img src="assets/images/readme/features/confirm.webp"></div>
 
 Upon selecting "Quit Game," a confirmation prompt is displayed, ensuring that players don't accidentally exit their game. This additional step helps prevent unintended game closures, offering a user-friendly experience by safeguarding players' game progress.
 
