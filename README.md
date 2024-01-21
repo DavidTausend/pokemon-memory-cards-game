@@ -282,7 +282,7 @@ In the Pokemon Memory Card Game, a timer starts with the first card flip, displa
 
 ### Schuffle cards
 
-<div align="center"><img src="assets/images/readme/features/cards.webp"><div>
+<div align="center"><img src="assets/images/readme/features/cards.webp"></div>
 
 The game shuffles the Pokemon cards before each round, ensuring a unique and challenging experience each time. This randomization is key to the memory aspect of the game, as it prevents memorization of card positions from previous games.
 
