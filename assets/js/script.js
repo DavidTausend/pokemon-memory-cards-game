@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('confirm-action-button').addEventListener('click', confirmAction);
     document.getElementById('cancel-action-button').addEventListener('click', cancelAction);
     document.getElementById('play-again').addEventListener('click', restart);
+    document.getElementById('submit-name-button').addEventListener('click', submitName);
 
     // Event listener for the close button in the high score window
     let closeHighScoreWindow = document.getElementById("winner").getElementsByClassName("close-window")[0];
@@ -38,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
         resetTimer();
         selectAndDisplayCards();
 
-        // Hide main menu , show game
+        // Hide main menu, show game
         document.getElementsByClassName('introduction')[0].style.display = 'none';
         document.getElementsByClassName('button-column')[0].style.display = 'none';
         document.getElementsByClassName('content-container')[0].style.display = 'block';
     }
 });
 
-// https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+// Modal
 function toggleModal(windowId, show) {
     let modalWindow = document.getElementById(windowId);
     modalWindow.style.display = show ? 'block' : 'none';
@@ -139,7 +140,7 @@ function sliderChange(value) {
 }
 // End of Music Settings
 
-// shuffleArray: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+// shuffleArray
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -156,7 +157,7 @@ function selectAndDisplayCards() {
     // Pokemon List
     const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu"];
 
-    // Select randomly 8 pokemons
+    // Select randomly 9 pokemons
     let selectedPokemon = [];
     while (selectedPokemon.length < 9) {
         const randomIndex = Math.floor(Math.random() * allPokemon.length);
@@ -166,7 +167,7 @@ function selectAndDisplayCards() {
         }
     }
 
-    // Duplicate each Pokemon to make 16 cards
+    // Duplicate each Pokemon to make 18 cards
     selectedPokemon = selectedPokemon.concat(selectedPokemon);
 
     // Shuffle the cards
@@ -208,8 +209,7 @@ function attachCardEventListeners() {
     currentFocusIndex = 0;
 }
 
-//Start timer: https://stackoverflow.com/questions/46458740/starting-timer-when-clicking-first-card-of-memory-game
-// Timer variables
+// Start timer
 let timer = {
     minutes: 0,
     seconds: 0,
@@ -309,7 +309,7 @@ function cardClickHandler() {
     }
 }
 
-//Scores code (Love math)
+//Scores code
 let currentScore = 0;
 
 //Increments score by 100
@@ -323,8 +323,6 @@ function descreaseScore() {
     if (currentScore >= 100) {
         addTimeToTimer(15);
     }
-
-    // It will not go minus
     currentScore = Math.max(0, currentScore - 100);
     document.getElementById("score").innerText = currentScore;
 }
@@ -388,7 +386,6 @@ function moveFocus(direction) {
     const cards = Array.from(document.getElementsByClassName("card"));
 
     // Adjust gridSize based on screen width
-    // 6 columns for larger screens, 3 columns for smaller screens
     const numCols = window.innerWidth >= 768 ? 3 : 6;
     let currentRow = Math.floor(currentFocusIndex / numCols);
     let currentCol = currentFocusIndex % numCols;
@@ -466,14 +463,6 @@ function displayHighScores() {
     let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     const highScoreList = document.getElementById('highScoreList');
     highScoreList.innerHTML = highScores.map(score => `<li>${score.name} - ${score.score}</li>`).join('');
-}
-
-// Enter name when the game ends (love math window)
-// improvement: make it to appear just once
-function onGameEnd() {
-    let playerName = prompt("Enter your name:");
-    saveScore(playerName, currentScore);
-    displayHighScores();
 }
 
 // Reset game

@@ -177,6 +177,7 @@ label[for="musicSlider"] {
     font-size: 2rem;
 }
 
+/* Pokemon Card Style */
 .cards {
     display: grid;
     grid-gap: 1rem;
@@ -184,7 +185,7 @@ label[for="musicSlider"] {
     grid-template-rows: repeat(2, calc(105px /2 * 3));
 }
 
-/* https://www.w3schools.com/cssref/pr_background-image.php */
+/* Background Card Image */
 .card {
     display: grid;
     justify-content: center;
@@ -201,8 +202,6 @@ label[for="musicSlider"] {
     transform: scale(1.03);
 }
 
-/* End of card code */
-
 /* Pokemon card image */
 .card img {
     height: 165px;
@@ -213,7 +212,7 @@ label[for="musicSlider"] {
 
 }
 
-/* Show card */
+/* Show Card */
 .card.clicked img,
 .card.checked img {
     opacity: 1;
@@ -223,7 +222,7 @@ label[for="musicSlider"] {
     animation: shake 0.5s;
 }
 
-/* Shake animation */
+/* Shake Animation */
 @keyframes shake {
     0% {
         transform: translateX(0px);
@@ -246,6 +245,8 @@ label[for="musicSlider"] {
     }
 }
 
+/* End of card code */
+
 #button-container {
     display: flex;
     justify-content: space-between;
@@ -261,7 +262,7 @@ label[for="musicSlider"] {
     cursor: pointer;
 }
 
-/* https://inclusive-components.design/cards/ */
+/* Card Focus */
 .card:focus {
     outline: 2px solid #D32F2F;
     background-color: #D32F2F;
