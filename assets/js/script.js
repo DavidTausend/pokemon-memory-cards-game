@@ -71,7 +71,7 @@ Array.from(document.getElementsByClassName('close-window')).forEach(button => {
 
 function submitName() {
     let playerNameInput = document.getElementById("player-name-input");
-    let playerName = playerNameInput.value;
+    let playerName = playerNameInput.value.trim();
 
     // Regular expression to allow only letters and spaces
     let nameRegex = /^[A-Za-z\s]+$/;
@@ -95,21 +95,6 @@ function submitName() {
     } else {
         alert('Invalid name. Please use only letters and spaces.');
     }
-}
-
-// Music Setting
-function musicSettings() {
-    let musicSettingsWindow = document.getElementById("music");
-    let span = document.getElementsByClassName("close-window")[0];
-    musicSettingsWindow.style.display = "block";
-    span.onclick = function () {
-        musicSettingsWindow.style.display = "none";
-    };
-    musicSettingsWindow.onclick = function (event) {
-        if (event.target == musicSettingsWindow) {
-            musicSettingsWindow.style.display = "none";
-        }
-    };
 }
 
 // Play music game
@@ -234,6 +219,7 @@ function startTimer() {
 }
 
 // Update timer display function
+let counter = 0;
 function updateTimerDisplay() {
     let timerElement = document.getElementsByClassName("timer")[0];
     let formattedMinutes = timer.minutes < 10 ? "0" + timer.minutes : timer.minutes;

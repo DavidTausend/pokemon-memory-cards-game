@@ -245,6 +245,11 @@ label[for="musicSlider"] {
     }
 }
 
+.card.disabled {
+    pointer-events: none;
+    opacity: 0.5; 
+}
+
 /* End of card code */
 
 #button-container {
