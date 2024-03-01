@@ -642,6 +642,16 @@ Accessibility testing was conducted using WAVE and Lighthouse tools, ensuring th
 |No Accidental Exits|Game should not exit without explicit confirmation from the player.|Tested various scenarios to ensure the game doesn't exit without player's confirmation.|The game remained active until the player explicitly confirmed to quit, preventing accidental exits.|Pass ✅|
 |User Experience with Confirmation Modal|The confirmation modal should be user-friendly and clear.|Evaluated the design and clarity of the confirmation modal for user understanding.|The confirmation modal was user-friendly, with clear options for confirming or canceling the quit action.|Pass ✅|
 
+`Confirm Quit Game`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------- | --------- |
+|Card Matching Logic|Cards with the same Pokémon image should match when flipped consecutively.|Tested flipping two identical cards in succession on all devices and browsers.|The game correctly identified matches, keeping both cards face up, across all devices and browsers.|Pass ✅| 
+|Visual Feedback for Matches|Matched cards should visually indicate they have been correctly paired.|Observed matched cards for visual changes indicating a successful match.|Matched cards displayed a distinct visual effect (e.g., a slight increase in size or a glow) to indicate a match on all tested devices.|Pass ✅|
+|Score Increment for Matches|Player's score should increase according to the game's scoring rules for each pair matched.|Completed several matches to observe score changes on all devices and browsers.|Scores increased correctly by the predefined amount for each match across all devices and browsers.|Pass ✅|
+|Incorrect Match Handling|Non-matching cards should flip back over after a short delay, allowing players to memorize their positions.|Flipped two non-matching cards to test their behavior on all devices and browsers.|Non-matching cards flipped back over after a brief pause, allowing for memorization, on all tested devices.|Pass ✅|
+|Matched Card Interaction Lock|Once cards are matched, they should no longer be interactive.|Attempted to interact with matched cards on all devices and browsers.|Matched cards did not respond to further clicks, effectively locking them in place on all tested devices.|Pass ✅|
+
 ### Bugs
 
 #### Known Bugs
