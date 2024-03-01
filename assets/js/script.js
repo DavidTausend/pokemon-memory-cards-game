@@ -267,6 +267,8 @@ function cardClickHandler() {
             // Match Cards
             clickedCard.classList.add("checked");
             firstCardElement.classList.add("checked");
+            clickedCard.classList.add("matched");
+            firstCardElement.classList.add("matched");
             matchedCards++;
             incrementScore();
             checkForWin();
