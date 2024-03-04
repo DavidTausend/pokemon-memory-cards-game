@@ -182,7 +182,6 @@ label[for="musicSlider"] {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(6, 110px);
-    grid-template-rows: repeat(2, calc(105px /2 * 3));
 }
 
 /* Background Card Image */
@@ -304,7 +303,37 @@ label[for="musicSlider"] {
     cursor: pointer;
 }
 
-/* Media query for extra small devices (phones, less than 768px) */
+/* Media query for extra small devices (phones, max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    h1, h2, p, label {
+        font-size: 1rem;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .actions button,
+    #name-modal button,
+    #button-container button,
+    .play-again-button button {
+        padding: 0.5rem 1.5rem;
+        font-size: medium;
+    }
+    
+    /* Adjust the card size */
+    .card {
+        height: 120px;
+        width: 80px; 
+    }
+
+    .card img {
+        height: 120px;
+        width: 80px;
+    }
+}
+
+/* Media query for small devices (tables and phones, less than 768px) */
 @media only screen and (max-width: 767px) {
 
     h1,
@@ -339,7 +368,6 @@ label[for="musicSlider"] {
 
     .cards {
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1.5rem;
     }
 
     .actions button,
@@ -347,7 +375,7 @@ label[for="musicSlider"] {
     #button-container button,
     .play-again-button button {
         /* smaller buttons */
-        padding: 8px 15px;
+        padding: 6px 12px;
         font-size: small;
     }
 
