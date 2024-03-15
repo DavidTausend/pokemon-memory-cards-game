@@ -348,7 +348,7 @@ function winnerMessage() {
 let matchedCards = 0;
 
 function checkForWin() {
-    if (matchedCards === 9) {
+    if (matchedCards === 8) {
         winnerMessage();
         // Stop timer
         resetTimer();
