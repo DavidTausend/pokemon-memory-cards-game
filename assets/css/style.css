@@ -181,7 +181,7 @@ label[for="musicSlider"] {
 .cards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(6, 110px);
+    grid-template-columns: repeat(4, 110px);
 }
 
 /* Background Card Image */
@@ -306,7 +306,7 @@ label[for="musicSlider"] {
 /* Media query for extra small devices (phones, max-width: 480px) */
 @media only screen and (max-width: 480px) {
     h1, h2, p, label {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 
     header img {
@@ -317,19 +317,19 @@ label[for="musicSlider"] {
     #name-modal button,
     #button-container button,
     .play-again-button button {
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1rem;
         font-size: medium;
     }
     
     /* Adjust the card size */
     .card {
-        height: 120px;
-        width: 80px; 
+        height: 110px;
+        width: 70px; 
     }
 
     .card img {
-        height: 120px;
-        width: 80px;
+        height: 110px;
+        width: 70px;
     }
 }
 
@@ -339,7 +339,7 @@ label[for="musicSlider"] {
     h1,
     h2,
     p {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
     header {
@@ -367,7 +367,7 @@ label[for="musicSlider"] {
     }
 
     .cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .actions button,
@@ -375,7 +375,7 @@ label[for="musicSlider"] {
     #button-container button,
     .play-again-button button {
         /* smaller buttons */
-        padding: 6px 12px;
+        padding: 5px 10px;
         font-size: small;
     }
 
@@ -384,7 +384,7 @@ label[for="musicSlider"] {
     }
 
     label[for="musicSlider"] {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -395,9 +395,8 @@ label[for="musicSlider"] {
     h2,
     p,
     label {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
-
 
     header {
         padding: 1rem 1rem;
@@ -405,6 +404,14 @@ label[for="musicSlider"] {
 
     .window-content {
         width: 75%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    label[for="musicSlider"] {
+        font-size: 1rem;
     }
 }
 
@@ -415,7 +422,7 @@ label[for="musicSlider"] {
     h2,
     p,
     label {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .actions button,
@@ -427,11 +434,13 @@ label[for="musicSlider"] {
     }
 
     .window-content {
-        width: 70%;
+        width: 65%;
     }
 
     .cards {
         grid-gap: 1.5rem;
+        grid-template-columns: repeat(8, 1fr);
+        
     }
 
     input[type="range"] {
@@ -439,7 +448,7 @@ label[for="musicSlider"] {
     }
 
     label[for="musicSlider"] {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -462,11 +471,7 @@ label[for="musicSlider"] {
     }
 
     .window-content {
-        width: 65%;
-    }
-
-    .cards {
-        grid-template-columns: repeat(9, 1fr);
+        width: 60%;
     }
 
     .card {

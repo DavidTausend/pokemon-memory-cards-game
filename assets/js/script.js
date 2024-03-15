@@ -142,9 +142,9 @@ function selectAndDisplayCards() {
     // Pokemon List
     const allPokemon = ["blastoise", "bulbasaur", "charmander", "cubone", "eevee", "flareon", "ivysaur", "newtwo", "persian", "pichu", "pikachu", "pokemons", "raichu"];
 
-    // Select randomly 9 pokemons
+    // Select randomly 8 pokemons
     let selectedPokemon = [];
-    while (selectedPokemon.length < 9) {
+    while (selectedPokemon.length < 8) {
         const randomIndex = Math.floor(Math.random() * allPokemon.length);
         const pokemon = allPokemon[randomIndex];
         if (!selectedPokemon.includes(pokemon)) {
@@ -152,13 +152,14 @@ function selectAndDisplayCards() {
         }
     }
 
-    // Duplicate each Pokemon to make 18 cards
+    // Duplicate each Pokemon to make 16 cards
     selectedPokemon = selectedPokemon.concat(selectedPokemon);
 
     // Shuffle the cards
     shuffleArray(selectedPokemon);
 
     const cardContainer = document.getElementsByClassName("cards")[0];
+
     // Clear existing cards
     cardContainer.innerHTML = '';
     selectedPokemon.forEach(pokemon => {
