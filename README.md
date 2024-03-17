@@ -660,6 +660,9 @@ There are currently no known bugs in the Pokemon Memory Card Game. The game has 
 
 #### Solved Bugs
 
+- Resolved an issue where players could click on already matched cards, leading to unintended score increases.
+- Fixed a bug affecting the game's responsiveness on certain mobile devices, ensuring a consistent layout across all screens.
+
 ## Credits
 
 ### Content

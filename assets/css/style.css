@@ -368,6 +368,7 @@ label[for="musicSlider"] {
 
     .cards {
         grid-template-columns: repeat(4, 1fr);
+        width: 90%;
     }
 
     .actions button,

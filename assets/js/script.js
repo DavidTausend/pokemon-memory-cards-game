@@ -247,7 +247,7 @@ counter = 0;
 let canClick = true;
 
 function cardClickHandler() {
-    if (!canClick) return;
+    if (this.classList.contains('matched') || !canClick) return;
     let clickedCard = this;
 
     // Prevent clicking the same card twice
