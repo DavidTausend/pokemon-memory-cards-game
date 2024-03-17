@@ -303,8 +303,8 @@ label[for="musicSlider"] {
     cursor: pointer;
 }
 
-/* Media query for extra small devices (phones, max-width: 480px) */
-@media only screen and (max-width: 480px) {
+/* Media query for extra small devices (phones, max-width: 530px) */
+@media only screen and (max-width: 530px) {
     h1, h2, p, label {
         font-size: 0.5rem;
     }
@@ -323,23 +323,23 @@ label[for="musicSlider"] {
     
     /* Adjust the card size */
     .card {
-        height: 110px;
-        width: 70px; 
+        height: 105px;
+        width: 75px; 
     }
 
     .card img {
-        height: 110px;
-        width: 70px;
+        height: 105px;
+        width: 75px;
     }
 }
 
 /* Media query for small devices (tables and phones, less than 768px) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
     h1,
     h2,
     p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     header {
@@ -384,18 +384,18 @@ label[for="musicSlider"] {
     }
 
     label[for="musicSlider"] {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
-/* Media query: larger screens laptops and tables (769px and up) */
+/* Media query: medium screens laptops and tables (769px and up) */
 @media screen and (min-width: 769px) {
 
     h1,
     h2,
     p,
     label {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     header {
@@ -411,12 +411,12 @@ label[for="musicSlider"] {
     }
 
     label[for="musicSlider"] {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
 
-/* Media query: larger devices (992px and up) */
-@media screen and (min-width: 992px) {
+/* Media query: larger devices (1070px and up) */
+@media screen and (min-width: 1070px) {
 
     h1,
     h2,
@@ -429,7 +429,7 @@ label[for="musicSlider"] {
     #name-modal button,
     #button-container button,
     .play-again-button button {
-        padding: 0.8rem 3.5rem;
+        padding: 0.5rem 1.5rem;
         font-size: larger;
     }
 
@@ -438,7 +438,7 @@ label[for="musicSlider"] {
     }
 
     .cards {
-        grid-gap: 1.5rem;
+        grid-gap: 1rem;
         grid-template-columns: repeat(8, 1fr);
         
     }
@@ -453,7 +453,7 @@ label[for="musicSlider"] {
 }
 
 /* Media query: larger screen devices (1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
 
     h1,
     h2,
@@ -471,17 +471,17 @@ label[for="musicSlider"] {
     }
 
     .window-content {
-        width: 60%;
+        width: 65%;
     }
-
+   
     .card {
-        height: 170px;
-        width: 120px;
+        height: 180px;
+        width: 130px;
     }
 
     .card img {
-        height: 170px;
-        width: 120px;
+        height: 180px;
+        width: 130px;
     }
 
     input[type="range"] {
